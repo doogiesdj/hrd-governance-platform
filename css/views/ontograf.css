@@ -212,7 +212,6 @@
 
 /* Links */
 .og-link {
-  stroke-width: 1.5;
   fill: none;
 }
 
@@ -339,7 +338,7 @@
 .og-node-propctx text { fill: #3fb950; }
 
 /* Object property edges */
-.og-link-objectProp { stroke: #3fb950; stroke-width: 1.5; stroke-dasharray: 6 3; }
+.og-link-objectProp { stroke: #3fb950; stroke-dasharray: 6 3; }
 
 /* Edge labels on objectProp links */
 .og-link-label {

@@ -85,6 +85,89 @@ const ProteGraf = (() => {
     _updateTreeSelection(null);
   }
 
+  // ── Tooltip helpers ───────────────────────────────────────────────────────
+  function _ttShow(html, event) {
+    const tip = document.getElementById('graph-tooltip');
+    if (!tip) return;
+    tip.innerHTML = html;
+    tip.style.display = 'block';
+    _ttMove(event);
+  }
+  function _ttMove(event) {
+    const tip = document.getElementById('graph-tooltip');
+    if (!tip) return;
+    const x = event.clientX + 14, y = event.clientY - 10;
+    const tipW = tip.offsetWidth, winW = window.innerWidth;
+    tip.style.left = (x + tipW > winW - 10 ? x - tipW - 28 : x) + 'px';
+    tip.style.top = Math.max(10, y) + 'px';
+  }
+  function _ttHide() {
+    const tip = document.getElementById('graph-tooltip');
+    if (tip) tip.style.display = 'none';
+  }
+
+  function _pgNodeTip(d) {
+    if (d.id === 'owl:Thing') return `<div class="tt-title">owl:Thing</div><div class="tt-row">온톨로지 루트</div>`;
+    const desc = CLASS_DESC[d.id] || '';
+    const parent = HIERARCHY[d.id] || '';
+    const children = _childrenOf(d.id);
+    const outProps = OBJECT_PROPS.filter(([src]) => src === d.id);
+    const inProps = OBJECT_PROPS.filter(([, , tgt]) => tgt === d.id);
+    let html = `<div class="tt-title">${d.id}</div>`;
+    html += d.isFocus ? `<div class="tt-row">선택된 클래스</div>` : `<div class="tt-row">관련 클래스 (깊이 ${d.depth})</div>`;
+    if (desc) html += `<div class="tt-row" style="color:#c8d8e8">${desc}</div>`;
+    if (parent) html += `<div class="tt-row">상위클래스: <b style="color:#e0e8f0">${parent}</b></div>`;
+    if (children.length) {
+      const shown = children.slice(0, 3).join(', ');
+      html += `<div class="tt-row">하위클래스(${children.length}): ${shown}${children.length > 3 ? ' …' : ''}</div>`;
+    }
+    if (outProps.length) {
+      const shown = outProps.slice(0, 3).map(([, p, t, k]) => `${k || p} → ${t}`).join(' / ');
+      html += `<div class="tt-row">→ 관계(${outProps.length}): ${shown}${outProps.length > 3 ? ' …' : ''}</div>`;
+    }
+    if (inProps.length) {
+      const shown = inProps.slice(0, 3).map(([s, p, , k]) => `${s} → ${k || p}`).join(' / ');
+      html += `<div class="tt-row">← 관계(${inProps.length}): ${shown}${inProps.length > 3 ? ' …' : ''}</div>`;
+    }
+    return html;
+  }
+
+  function _pgLinkTip(d) {
+    const src = typeof d.source === 'object' ? d.source.id : d.source;
+    const tgt = typeof d.target === 'object' ? d.target.id : d.target;
+    const srcDesc = CLASS_DESC[src] || '';
+    const tgtDesc = CLASS_DESC[tgt] || '';
+    if (d.prop === 'subClassOf') {
+      return `<div class="tt-title">subClassOf</div>` +
+             `<div class="tt-row">유형: 상속 관계 (is-a)</div>` +
+             `<div class="tt-row">하위: <b style="color:#e0e8f0">${src}</b>${srcDesc ? ` (${srcDesc})` : ''}</div>` +
+             `<div class="tt-row">상위: <b style="color:#e0e8f0">${tgt}</b>${tgtDesc ? ` (${tgtDesc})` : ''}</div>`;
+    }
+    let html = `<div class="tt-title">${d.kor || d.prop}</div>`;
+    if (d.prop && d.kor) html += `<div class="tt-row">속성명: ${d.prop}</div>`;
+    html += `<div class="tt-row">유형: 객체 속성 (Object Property)</div>`;
+    html += `<div class="tt-row">도메인: <b style="color:#e0e8f0">${src}</b>${srcDesc ? ` (${srcDesc})` : ''}</div>`;
+    html += `<div class="tt-row">범위: <b style="color:#e0e8f0">${tgt}</b>${tgtDesc ? ` (${tgtDesc})` : ''}</div>`;
+    return html;
+  }
+
+  function _pgTreeTip(cls) {
+    const desc = CLASS_DESC[cls] || '';
+    const parent = HIERARCHY[cls] || '';
+    const children = _childrenOf(cls);
+    const outProps = OBJECT_PROPS.filter(([src]) => src === cls);
+    let html = `<div class="tt-title">${cls}</div>`;
+    if (desc) html += `<div class="tt-row" style="color:#c8d8e8">${desc}</div>`;
+    if (parent) html += `<div class="tt-row">상위클래스: <b style="color:#e0e8f0">${parent}</b></div>`;
+    if (children.length) html += `<div class="tt-row">하위클래스: ${children.length}개</div>`;
+    if (outProps.length) {
+      const shown = outProps.slice(0, 2).map(([, p, t, k]) => `${k || p} → ${t}`).join(' / ');
+      html += `<div class="tt-row">→ 관계: ${shown}${outProps.length > 2 ? ' …' : ''}</div>`;
+    }
+    html += `<div class="tt-row" style="color:#4a6070;font-size:10px">클릭하여 그래프 보기</div>`;
+    return html;
+  }
+
   // ── Left-panel class tree ───────────────────────────────────────────────────
   function _buildTreeNode(cls, depth) {
     const children = _childrenOf(cls);
@@ -133,10 +216,30 @@ const ProteGraf = (() => {
     if (el) el.scrollIntoView({ block: 'nearest' });
   }
 
+  // ── Edge weight: domainCount[src] × rangeCount[tgt] — varies in BOTH source and target views ──
+  function _pgPropWeights() {
+    const domainCount = {}, rangeCount = {};
+    OBJECT_PROPS.forEach(([src, , tgt]) => {
+      domainCount[src] = (domainCount[src] || 0) + 1;
+      rangeCount[tgt]  = (rangeCount[tgt]  || 0) + 1;
+    });
+    const childCount = {};
+    Object.values(HIERARCHY).forEach(p => { childCount[p] = (childCount[p] || 0) + 1; });
+    const pVals = OBJECT_PROPS.map(([src, , tgt]) => (domainCount[src] || 1) * (rangeCount[tgt] || 1));
+    const pMin = Math.min(...pVals), pMax = Math.max(...pVals);
+    const cVals = Object.values(childCount);
+    const cMin = Math.min(...cVals), cMax = Math.max(...cVals);
+    return {
+      forEdge: (src, tgt) => { const v = (domainCount[src] || 1) * (rangeCount[tgt] || 1); return pMax === pMin ? 3 : 0.8 + ((v - pMin) / (pMax - pMin)) * 10.2; },
+      forSub:  tgt => { const v = childCount[tgt] || 1; return cMax === cMin ? 2.5 : 1 + ((v - cMin) / (cMax - cMin)) * 5; },
+    };
+  }
+
   // ── Graph data builder ──────────────────────────────────────────────────────
   function _buildData() {
     const nodes = [], links = [];
     const nodeSet = new Set();
+    const wt = _pgPropWeights();
 
     function addNode(id, isFocus) {
       if (nodeSet.has(id)) return;
@@ -146,7 +249,8 @@ const ProteGraf = (() => {
 
     function addLink(src, tgt, prop, kor) {
       if (links.some(l => l.source === src && l.target === tgt && l.prop === prop)) return;
-      links.push({ source: src, target: tgt, prop, kor, color: _edgeColor(prop), _idx: links.length });
+      const weight = prop === 'subClassOf' ? wt.forSub(tgt) : wt.forEdge(src, tgt);
+      links.push({ source: src, target: tgt, prop, kor, color: _edgeColor(prop), _idx: links.length, weight });
     }
 
     // After collecting all nodes, add EVERY edge between any two visible nodes
@@ -224,6 +328,26 @@ const ProteGraf = (() => {
     return (s.y || 0) + dy * r;
   }
 
+  function _ptSegDist(px, py, x1, y1, x2, y2) {
+    const dx = x2 - x1, dy = y2 - y1;
+    const lenSq = dx * dx + dy * dy;
+    if (lenSq < 1e-10) return Math.hypot(px - x1, py - y1);
+    const t = Math.max(0, Math.min(1, ((px - x1) * dx + (py - y1) * dy) / lenSq));
+    return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
+  }
+
+  function _ptBezierDist(px, py, sx, sy, cpx, cpy, tx, ty) {
+    let minD = Infinity;
+    for (let i = 0; i <= 8; i++) {
+      const t = i / 8, u = 1 - t;
+      const bx = u * u * sx + 2 * u * t * cpx + t * t * tx;
+      const by = u * u * sy + 2 * u * t * cpy + t * t * ty;
+      const d = Math.hypot(px - bx, py - by);
+      if (d < minD) minD = d;
+    }
+    return minD;
+  }
+
   function _renderGraph() {
     const wrap = document.getElementById('pg-graph-wrap');
     if (!wrap) return;
@@ -255,6 +379,8 @@ const ProteGraf = (() => {
 
     const g = svg.append('g');
     svg.call(d3.zoom().scaleExtent([0.08, 5]).on('zoom', e => g.attr('transform', e.transform)));
+    // Transparent full-viewport rect so mousemove fires everywhere (not just on painted elements)
+    svg.insert('rect', 'g').attr('width', W).attr('height', H).attr('fill', 'none').style('pointer-events', 'all');
 
     // ── Initial positions ──
     nodes.forEach((n, i) => {
@@ -288,10 +414,11 @@ const ProteGraf = (() => {
     const linkSel = linkG.selectAll('path.pg-link').data(links).join('path')
       .attr('class', 'pg-link')
       .attr('stroke', d => d.color)
-      .attr('stroke-width', 1.8)
+      .style('stroke-width', d => `${d.weight || 1.8}px`)
       .attr('stroke-dasharray', '9,5')
       .attr('fill', 'none')
-      .attr('marker-end', d => `url(#${colorToMarkerId.get(d.color)})`);
+      .attr('marker-end', d => `url(#${colorToMarkerId.get(d.color)})`)
+      .style('pointer-events', 'none');
 
     const labelSel = linkG.selectAll('text.pg-link-lbl').data(links).join('text')
       .attr('class', 'pg-link-lbl')
@@ -318,8 +445,12 @@ const ProteGraf = (() => {
         if (badge) badge.textContent = '1 result(s) found.';
         const inp = document.getElementById('pg-search-input');
         if (inp) inp.value = d.id;
+        _ttHide();
         _renderGraph();
-      });
+      })
+      .on('mouseover', (e, d) => _ttShow(_pgNodeTip(d), e))
+      .on('mousemove', e => _ttMove(e))
+      .on('mouseout', _ttHide);
 
     // owl:Thing rendered as a circle
     nodeSel.each(function(d) {
@@ -376,7 +507,7 @@ const ProteGraf = (() => {
       .force('collide', d3.forceCollide(88))
       .on('tick', () => {
         nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
-        linkSel.attr('d', d => {
+        const pathD = d => {
           const sx = _edgeEndX(d.source, d.target, true);
           const sy = _edgeEndY(d.source, d.target, true);
           const tx = _edgeEndX(d.source, d.target, false);
@@ -387,7 +518,8 @@ const ProteGraf = (() => {
           const cpx = (sx + tx) / 2 - (dy / len) * d._curve;
           const cpy = (sy + ty) / 2 + (dx / len) * d._curve;
           return `M${sx},${sy} Q${cpx},${cpy} ${tx},${ty}`;
-        });
+        };
+        linkSel.attr('d', pathD);
         labelSel
           .attr('x', d => {
             const sx = _edgeEndX(d.source, d.target, true);
@@ -408,6 +540,41 @@ const ProteGraf = (() => {
       });
 
     _sim = sim;
+
+    let _hovLink = null;
+    svg.on('mousemove', function(e) {
+      if (e.target.closest && e.target.closest('.pg-ng')) {
+        if (_hovLink) { _ttHide(); _hovLink = null; }
+        return;
+      }
+      const [mx, my] = d3.pointer(e, g.node());
+      let closest = null, minDist = Infinity;
+      links.forEach(lk => {
+        if (!lk.source || !lk.target || lk.source.x == null) return;
+        const sx = _edgeEndX(lk.source, lk.target, true);
+        const sy = _edgeEndY(lk.source, lk.target, true);
+        const ex = _edgeEndX(lk.source, lk.target, false);
+        const ey = _edgeEndY(lk.source, lk.target, false);
+        let d;
+        if (lk._curve === 0) {
+          d = _ptSegDist(mx, my, sx, sy, ex, ey);
+        } else {
+          const ddx = ex - sx, ddy = ey - sy;
+          const len = Math.sqrt(ddx * ddx + ddy * ddy) || 1;
+          const cpx = (sx + ex) / 2 - (ddy / len) * lk._curve;
+          const cpy = (sy + ey) / 2 + (ddx / len) * lk._curve;
+          d = _ptBezierDist(mx, my, sx, sy, cpx, cpy, ex, ey);
+        }
+        if (d < minDist) { minDist = d; closest = lk; }
+      });
+      const THRESH = 12;
+      if (minDist <= THRESH) {
+        if (_hovLink !== closest) { _ttShow(_pgLinkTip(closest), e); _hovLink = closest; }
+        else _ttMove(e);
+      } else {
+        if (_hovLink) { _ttHide(); _hovLink = null; }
+      }
+    }).on('mouseleave', () => { _ttHide(); _hovLink = null; });
   }
 
   // ── Init ────────────────────────────────────────────────────────────────────
@@ -441,9 +608,22 @@ const ProteGraf = (() => {
         </div>
       </div>`;
 
-    document.getElementById('pg-tree-scroll').innerHTML = _buildFullTree();
+    const pgTreeScroll = document.getElementById('pg-tree-scroll');
+    pgTreeScroll.innerHTML = _buildFullTree();
 
-    document.getElementById('pg-tree-scroll').addEventListener('click', evt => {
+    pgTreeScroll.addEventListener('mouseover', evt => {
+      const clsEl = evt.target.closest('.pg-tree-cls');
+      if (clsEl) _ttShow(_pgTreeTip(clsEl.dataset.cls), evt);
+    });
+    pgTreeScroll.addEventListener('mousemove', evt => {
+      const tip = document.getElementById('graph-tooltip');
+      if (tip && tip.style.display !== 'none') _ttMove(evt);
+    });
+    pgTreeScroll.addEventListener('mouseout', evt => {
+      if (evt.target.closest('.pg-tree-cls')) _ttHide();
+    });
+
+    pgTreeScroll.addEventListener('click', evt => {
       const tog = evt.target.closest('.pg-tree-toggle');
       if (tog) {
         const cls = tog.dataset.cls;

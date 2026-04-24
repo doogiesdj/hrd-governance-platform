@@ -19,11 +19,11 @@ Phase 0에서 정비한 모듈 구조 위에 새로운 분석 기능과 인터�
 | 1-1 | 역량 갭 히트맵 (기관 × 역량 매트릭스) | 높음 | ✅ 완료 |
 | 1-2 | Sankey 다이어그램 (예산 → 정책 → 프로그램 → 역량 흐름) | 높음 | ✅ 완료 |
 | 1-3 | 프로그램-역량 정합도 점수 계산 및 표시 | 높음 | ✅ 완료 |
-| 1-4 | 역량 갭 해결 현황 워크플로우 뷰 추가 | 중간 | ⏳ 예정 |
-| 1-5 | VOWL 그래프 엣지 가중치 시각화 개선 | 낮음 | ⏳ 예정 |
-| — | RDF Domain/Range 잔여 누락 보완 | 중간 | ⏳ 예정 |
-| — | style.css 뷰별 분리 (`css/views/`) | 중간 | ⏳ 예정 |
-| — | ontograf.js / protegraf.js 800줄 이하로 분리 | 중간 | ⏳ 예정 |
+| 1-4 | 역량 갭 해결 현황 워크플로우 뷰 추가 | 중간 | ✅ 완료 |
+| 1-5 | VOWL 그래프 엣지 가중치 시각화 개선 | 낮음 | ✅ 완료 |
+| — | RDF Domain/Range 잔여 누락 보완 | 중간 | ✅ 완료 (전수 확인) |
+| — | style.css 뷰별 분리 (`css/views/`) | 중간 | ✅ 완료 |
+| — | ontograf.js / protegraf.js 800줄 이하로 분리 | 중간 | ✅ 완료 |
 
 ---
 
@@ -256,24 +256,27 @@ Phase 1에서 적용된 구현 패턴이 Phase 0에서 정립한 원칙을 따�
 
 ---
 
-## 6. Phase 1 잔여 작업
+## 6. Phase 1 잔여 작업 (전체 완료)
 
-### 1-4: 역량 갭 해결 현황 워크플로우 뷰
+### 1-4: 역량 갭 해결 현황 워크플로우 뷰 ✅
 
-갭 항목별로 "해소 상태(미착수 / 진행 중 / 완료)"를 시각화하는 칸반 또는 타임라인 뷰.  
-`competencyGaps` 데이터에 `status` 필드가 없으면 `fieldCatCode` 기준 프로그램 매핑으로 추정 표시.
+갭 항목별 "해소 상태(미착수 / 진행 중 / 완료)"를 칸반 보드로 시각화.  
+`competencyGaps` 데이터의 `fieldCatCode` 기준 프로그램 매핑으로 상태 추정 표시.  
+`css/views/competency.css`에 칸반 레이아웃 CSS 포함.
 
-### 1-5: VOWL 그래프 엣지 가중치 시각화
+### 1-5: VOWL 그래프 엣지 가중치 시각화 ✅
 
-`graph.js`의 `VowlGraph`에서 ObjectProperty 사용 빈도를 엣지 두께로 매핑.  
+`graph.js`의 `VowlGraph`에 `_propWeights()` 메서드 추가.  
+ObjectProperty 사용 빈도를 min-max 정규화하여 엣지 두께 1.5–5px로 매핑.  
 트리플 수가 많을수록 굵고 밝은 엣지로 표시.
 
-### 중간 우선순위 (순서 미정)
+### 중간 우선순위 작업 ✅
 
-- **RDF Domain/Range 잔여 보완**: `collaboratesWith`, `relatedToCompetency` 등 8개 속성 Domain 추가
-- **style.css 분리**: 3,200줄+ 단일 파일 → `css/views/` 디렉토리로 뷰별 분리
-- **ontograf.js / protegraf.js 분리**: 현재 각각 800줄 이상 — 책임 단위로 추출
+- **RDF Domain/Range 보완**: 202개 ObjectProperty 전수 확인 → 모두 domain/range 보유 확인, 추가 작업 불필요
+- **style.css 분리**: 3,245줄 단일 파일 → `css/base.css` + `css/views/` 9개 파일로 분리
+- **ontograf.js 분리**: 917줄 → 797줄 — 상수를 `ontograf-hierarchy.js`, HTML 템플릿을 `ontograf-template.js`로 추출
+- **protegraf.js 분리**: 823줄 → 483줄 — 6개 상수 블록을 `protegraf-constants.js`로 추출
 
 ---
 
-*문서 끝 — Phase 1 진행 중 (1-1 · 1-2 · 1-3 완료) 2026-04-24*
+*문서 끝 — Phase 1 전체 완료 (1-1 · 1-2 · 1-3 · 1-4 · 1-5 · 잔여 작업 모두 완료) 2026-04-24*

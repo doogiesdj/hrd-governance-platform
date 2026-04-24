@@ -185,6 +185,129 @@ const OntoGraf = (() => {
 
   let _sim = null;
 
+  // ── Tooltip helpers ───────────────────────────────────────────────────────
+  function _ttShow(html, event) {
+    const tip = document.getElementById('graph-tooltip');
+    if (!tip) return;
+    tip.innerHTML = html;
+    tip.style.display = 'block';
+    _ttMove(event);
+  }
+  function _ttMove(event) {
+    const tip = document.getElementById('graph-tooltip');
+    if (!tip) return;
+    const x = event.clientX + 14, y = event.clientY - 10;
+    const tipW = tip.offsetWidth, winW = window.innerWidth;
+    tip.style.left = (x + tipW > winW - 10 ? x - tipW - 28 : x) + 'px';
+    tip.style.top = Math.max(10, y) + 'px';
+  }
+  function _ttHide() {
+    const tip = document.getElementById('graph-tooltip');
+    if (tip) tip.style.display = 'none';
+  }
+
+  const _OG_NODE_TYPE_LABELS = {
+    selected: '선택된 클래스', context: '관련 클래스', child: '하위 클래스',
+    instance: '인스턴스', 'selected-inst': '선택된 인스턴스',
+    propctx: '속성 관련 클래스', grandcontext: '상위 관련 클래스', more: '더 보기',
+  };
+
+  function _ogNodeTip(d) {
+    const typeLabel = _OG_NODE_TYPE_LABELS[d.type] || d.type;
+    if (d.type === 'more') {
+      return `<div class="tt-title">더 보기</div><div class="tt-row">클릭하여 더 많은 인스턴스 보기</div>`;
+    }
+    if (d.type === 'instance' || d.type === 'selected-inst') {
+      const parent = d.parentCls || '';
+      const desc = (typeof _PG_CLASS_DESC !== 'undefined' && _PG_CLASS_DESC[parent]) || '';
+      let html = `<div class="tt-title">${d.label}</div>`;
+      if (d.id !== d.label) html += `<div class="tt-row">ID: ${d.id}</div>`;
+      html += `<div class="tt-row">유형: ${typeLabel}</div>`;
+      if (parent) html += `<div class="tt-row">클래스: <b style="color:#e0e8f0">${parent}</b></div>`;
+      if (desc) html += `<div class="tt-row" style="color:#c8d8e8">${desc}</div>`;
+      return html;
+    }
+    const desc = (typeof _PG_CLASS_DESC !== 'undefined' && _PG_CLASS_DESC[d.id]) || '';
+    const parent = HIERARCHY[d.id] || '';
+    const children = _childrenOf(d.id);
+    const insts = _instancesOf(d.id);
+    const outProps = OBJECT_PROPS.filter(([src]) => src === d.id);
+    const inProps = OBJECT_PROPS.filter(([, , tgt]) => tgt === d.id);
+    let html = `<div class="tt-title">${d.id}</div>`;
+    html += `<div class="tt-row">유형: ${typeLabel}</div>`;
+    if (desc) html += `<div class="tt-row" style="color:#c8d8e8">${desc}</div>`;
+    if (parent) html += `<div class="tt-row">상위클래스: <b style="color:#e0e8f0">${parent}</b></div>`;
+    if (children.length) {
+      const shown = children.slice(0, 3).join(', ');
+      html += `<div class="tt-row">하위클래스(${children.length}): ${shown}${children.length > 3 ? ' …' : ''}</div>`;
+    }
+    if (insts.length) html += `<div class="tt-row">인스턴스 수: ${insts.length}개</div>`;
+    if (outProps.length) {
+      const shown = outProps.slice(0, 3).map(([, p, t, k]) => `${k || p} → ${t}`).join(' / ');
+      html += `<div class="tt-row">→ 관계(${outProps.length}): ${shown}${outProps.length > 3 ? ' …' : ''}</div>`;
+    }
+    if (inProps.length) {
+      const shown = inProps.slice(0, 3).map(([s, p, , k]) => `${s} → ${k || p}`).join(' / ');
+      html += `<div class="tt-row">← 관계(${inProps.length}): ${shown}${inProps.length > 3 ? ' …' : ''}</div>`;
+    }
+    return html;
+  }
+
+  function _ogLinkTip(d) {
+    const src = typeof d.source === 'object' ? d.source.id : d.source;
+    const tgt = typeof d.target === 'object' ? d.target.id : d.target;
+    const srcDesc = (typeof _PG_CLASS_DESC !== 'undefined' && _PG_CLASS_DESC[src]) || '';
+    const tgtDesc = (typeof _PG_CLASS_DESC !== 'undefined' && _PG_CLASS_DESC[tgt]) || '';
+    if (d.rel === 'objectProp') {
+      let html = `<div class="tt-title">${d.korLabel || d.propName || '객체 속성'}</div>`;
+      if (d.propName && d.korLabel) html += `<div class="tt-row">속성명: ${d.propName}</div>`;
+      html += `<div class="tt-row">유형: 객체 속성 (Object Property)</div>`;
+      html += `<div class="tt-row">도메인: <b style="color:#e0e8f0">${src}</b>${srcDesc ? ` (${srcDesc})` : ''}</div>`;
+      html += `<div class="tt-row">범위: <b style="color:#e0e8f0">${tgt}</b>${tgtDesc ? ` (${tgtDesc})` : ''}</div>`;
+      return html;
+    }
+    if (d.rel === 'subClassOf') {
+      return `<div class="tt-title">subClassOf</div>` +
+             `<div class="tt-row">유형: 상속 관계 (is-a)</div>` +
+             `<div class="tt-row">하위: <b style="color:#e0e8f0">${src}</b>${srcDesc ? ` (${srcDesc})` : ''}</div>` +
+             `<div class="tt-row">상위: <b style="color:#e0e8f0">${tgt}</b>${tgtDesc ? ` (${tgtDesc})` : ''}</div>`;
+    }
+    if (d.rel === 'instanceOf') {
+      return `<div class="tt-title">instanceOf</div>` +
+             `<div class="tt-row">유형: 인스턴스 관계</div>` +
+             `<div class="tt-row">인스턴스: <b style="color:#e0e8f0">${src}</b></div>` +
+             `<div class="tt-row">클래스: <b style="color:#e0e8f0">${tgt}</b>${tgtDesc ? ` (${tgtDesc})` : ''}</div>`;
+    }
+    return `<div class="tt-title">${d.rel}</div><div class="tt-row">${src} → ${tgt}</div>`;
+  }
+
+  function _ogTreeClsTip(cls) {
+    const desc = (typeof _PG_CLASS_DESC !== 'undefined' && _PG_CLASS_DESC[cls]) || '';
+    const parent = HIERARCHY[cls] || '';
+    const children = _childrenOf(cls);
+    const insts = _instancesOf(cls);
+    const outProps = OBJECT_PROPS.filter(([src]) => src === cls);
+    let html = `<div class="tt-title">${cls}</div>`;
+    if (desc) html += `<div class="tt-row" style="color:#c8d8e8">${desc}</div>`;
+    if (parent) html += `<div class="tt-row">상위클래스: <b style="color:#e0e8f0">${parent}</b></div>`;
+    if (children.length) html += `<div class="tt-row">하위클래스: ${children.length}개</div>`;
+    if (insts.length) html += `<div class="tt-row">인스턴스: ${insts.length}개</div>`;
+    if (outProps.length) {
+      const shown = outProps.slice(0, 2).map(([, p, t, k]) => `${k || p} → ${t}`).join(' / ');
+      html += `<div class="tt-row">→ 관계: ${shown}${outProps.length > 2 ? ' …' : ''}</div>`;
+    }
+    html += `<div class="tt-row" style="color:#4a6070;font-size:10px">클릭하여 그래프 추가</div>`;
+    return html;
+  }
+
+  function _ogTreeInstTip(inst, cls) {
+    const desc = (typeof _PG_CLASS_DESC !== 'undefined' && _PG_CLASS_DESC[cls]) || '';
+    let html = `<div class="tt-title">${inst}</div>`;
+    html += `<div class="tt-row">클래스: <b style="color:#e0e8f0">${cls}</b>${desc ? ` (${desc})` : ''}</div>`;
+    html += `<div class="tt-row" style="color:#4a6070;font-size:10px">클릭하여 그래프 추가</div>`;
+    return html;
+  }
+
   // ── Helpers ───────────────────────────────────────────────────────────────
   function _childrenOf(cls) {
     return Object.entries(HIERARCHY).filter(([, p]) => p === cls).map(([c]) => c).sort();
@@ -295,10 +418,45 @@ const OntoGraf = (() => {
     badge.className = total > 0 ? 'og-badge og-badge-active' : 'og-badge';
   }
 
+  // ── Edge weight: domainCount[src] × rangeCount[tgt] — varies in BOTH source and target views ──
+  function _ogLinkWeights() {
+    const domainCount = {}, rangeCount = {};
+    OBJECT_PROPS.forEach(([src, , tgt]) => {
+      domainCount[src] = (domainCount[src] || 0) + 1;
+      rangeCount[tgt]  = (rangeCount[tgt]  || 0) + 1;
+    });
+    const childCount = {};
+    Object.values(HIERARCHY).forEach(p => { childCount[p] = (childCount[p] || 0) + 1; });
+    const D = (typeof OntologyData !== 'undefined') ? OntologyData : null;
+    const instCount = {};
+    if (D) {
+      const CLS_MAP = {
+        strategies: 'NationalStrategy', policies: 'Policy', budgets: 'Budget',
+        programs: 'EducationProgram', organizations: 'Organization', persons: 'HumanResource',
+        outcomes: 'Outcome', benefits: 'Benefit', targetGroups: 'TargetGroup',
+        competencies: 'Competency',
+      };
+      for (const [key, cls] of Object.entries(CLS_MAP)) { instCount[cls] = (D[key] || []).length; }
+    }
+    const pVals = OBJECT_PROPS.map(([src, , tgt]) => (domainCount[src] || 1) * (rangeCount[tgt] || 1));
+    const pMin = Math.min(...pVals), pMax = Math.max(...pVals);
+    const cVals = Object.values(childCount);
+    const cMin = Math.min(...cVals), cMax = Math.max(...cVals);
+    const iVals = Object.values(instCount).filter(v => v > 0);
+    const iMin = iVals.length ? Math.min(...iVals) : 1;
+    const iMax = iVals.length ? Math.max(...iVals) : 1;
+    return {
+      forEdge: (src, tgt) => { const v = (domainCount[src] || 1) * (rangeCount[tgt] || 1); return pMax === pMin ? 3 : 0.8 + ((v - pMin) / (pMax - pMin)) * 10.2; },
+      forSub:  tgt => { const v = childCount[tgt] || 1; return cMax === cMin ? 2.5 : 1 + ((v - cMin) / (cMax - cMin)) * 5; },
+      forInst: cls => { const v = instCount[cls]  || 1; return iMax === iMin ? 1.5 : 1 + ((v - iMin) / (iMax - iMin)) * 4; },
+    };
+  }
+
   // ── Multi-graph builder ───────────────────────────────────────────────────
   function _buildMultiGraph() {
     const nodes = [], links = [];
     const nodeMap = new Map();
+    const wt = _ogLinkWeights();
 
     const PRIORITY = { selected: 6, 'selected-inst': 6, child: 5, instance: 4, context: 3, propctx: 2, grandcontext: 1 };
 
@@ -330,7 +488,8 @@ const OntoGraf = (() => {
           return;
         }
       }
-      links.push({ source: src, target: tgt, rel, propName: propName || '', korLabel: korLabel || '' });
+      const weight = rel === 'subClassOf' ? wt.forSub(tgt) : rel === 'instanceOf' ? wt.forInst(tgt) : wt.forEdge(src, tgt);
+      links.push({ source: src, target: tgt, rel, propName: propName || '', korLabel: korLabel || '', weight });
     }
 
     if (_selClasses.size === 0 && _selInstances.size === 0) {
@@ -499,6 +658,8 @@ const OntoGraf = (() => {
 
     const g = svg.append('g');
     svg.call(d3.zoom().scaleExtent([0.15, 4]).on('zoom', e => g.attr('transform', e.transform)));
+    // Transparent full-viewport rect so mousemove fires everywhere (not just on painted elements)
+    svg.insert('rect', 'g').attr('width', W).attr('height', H).attr('fill', 'none').style('pointer-events', 'all');
 
     const cx = W / 2, cy = H / 2;
     const selNodes = nodes.filter(n => n.type === 'selected' || n.type === 'selected-inst');
@@ -522,11 +683,13 @@ const OntoGraf = (() => {
         if (d.rel === 'objectProp') return 'og-link og-link-objectProp';
         return 'og-link og-link-' + d.rel;
       })
+      .style('stroke-width', d => `${d.weight || 1.5}px`)
       .attr('marker-end', d => {
         if (d.rel === 'instanceOf') return 'url(#og-arr-inst)';
         if (d.rel === 'objectProp') return 'url(#og-arr-prop)';
         return 'url(#og-arr-sub)';
-      });
+      })
+      .style('pointer-events', 'none');
 
     // Link labels for objectProp edges
     const propLinks = links.filter(l => l.rel === 'objectProp');
@@ -557,7 +720,11 @@ const OntoGraf = (() => {
           _toggleClass(d.id);
         }
         _showNodeInfo(d);
-      });
+        _ttHide();
+      })
+      .on('mouseover', (e, d) => _ttShow(_ogNodeTip(d), e))
+      .on('mousemove', e => _ttMove(e))
+      .on('mouseout', _ttHide);
 
     // Propagate parentCls to instance nodes
     links.forEach(l => {
@@ -604,6 +771,32 @@ const OntoGraf = (() => {
       });
 
     _sim = sim;
+
+    let _hovLink = null;
+    svg.on('mousemove', function(e) {
+      if (e.target.closest && e.target.closest('.og-node')) {
+        if (_hovLink) { _ttHide(); _hovLink = null; }
+        return;
+      }
+      const [mx, my] = d3.pointer(e, g.node());
+      let closest = null, minDist = Infinity;
+      links.forEach(lk => {
+        if (!lk.source || !lk.target || lk.source.x == null) return;
+        const x1 = _edgeX(lk.source, lk.target, true);
+        const y1 = _edgeY(lk.source, lk.target, true);
+        const x2 = _edgeX(lk.source, lk.target, false);
+        const y2 = _edgeY(lk.source, lk.target, false);
+        const d = _ptSegDist(mx, my, x1, y1, x2, y2);
+        if (d < minDist) { minDist = d; closest = lk; }
+      });
+      const THRESH = 12;
+      if (minDist <= THRESH) {
+        if (_hovLink !== closest) { _ttShow(_ogLinkTip(closest), e); _hovLink = closest; }
+        else _ttMove(e);
+      } else {
+        if (_hovLink) { _ttHide(); _hovLink = null; }
+      }
+    }).on('mouseleave', () => { _ttHide(); _hovLink = null; });
   }
 
   function _isCircleNode(n) {
@@ -626,6 +819,14 @@ const OntoGraf = (() => {
     const hw = NODE_W / 2, hh = NODE_H / 2;
     const r = (Math.abs(dx) * hh > Math.abs(dy) * hw) ? hw / Math.abs(dx) : hh / Math.abs(dy);
     return s.y + dy * r;
+  }
+
+  function _ptSegDist(px, py, x1, y1, x2, y2) {
+    const dx = x2 - x1, dy = y2 - y1;
+    const lenSq = dx * dx + dy * dy;
+    if (lenSq < 1e-10) return Math.hypot(px - x1, py - y1);
+    const t = Math.max(0, Math.min(1, ((px - x1) * dx + (py - y1) * dy) / lenSq));
+    return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
   }
 
   // ── Instance list panel ───────────────────────────────────────────────────
@@ -759,6 +960,20 @@ const OntoGraf = (() => {
     wrap.innerHTML = _ONTOGRAF_TEMPLATE;
 
     document.getElementById('og-tree-scroll').innerHTML = _buildFullTree();
+
+    wrap.addEventListener('mouseover', evt => {
+      const clsEl = evt.target.closest('.og-tree-class');
+      if (clsEl) { _ttShow(_ogTreeClsTip(clsEl.dataset.cls), evt); return; }
+      const instEl = evt.target.closest('.og-tree-instance');
+      if (instEl) { _ttShow(_ogTreeInstTip(instEl.dataset.inst, instEl.dataset.cls), evt); }
+    });
+    wrap.addEventListener('mousemove', evt => {
+      const tip = document.getElementById('graph-tooltip');
+      if (tip && tip.style.display !== 'none') _ttMove(evt);
+    });
+    wrap.addEventListener('mouseout', evt => {
+      if (evt.target.closest('.og-tree-class, .og-tree-instance')) _ttHide();
+    });
 
     wrap.addEventListener('click', evt => {
       const tog = evt.target.closest('.og-tree-toggle');
