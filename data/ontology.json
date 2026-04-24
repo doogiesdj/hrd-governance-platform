@@ -29,34 +29,70 @@
       "type": "NationalStrategy",
       "policies": [
         {
-          "id": "POLICY_45",
-          "name": "평생학습계좌제 확대 및 디지털 역량 지원 정책",
-          "en": "Lifelong Learning Account System Expansion and Digital Competency Support Policy"
-        },
-        {
           "id": "POLICY_44",
           "name": "자동화·AI 대체 직종 전환 훈련 정책",
           "en": "Automation and AI Job Replacement Transition Training Policy"
+        },
+        {
+          "id": "POLICY_45",
+          "name": "평생학습계좌제 확대 및 디지털 역량 지원 정책",
+          "en": "Lifelong Learning Account System Expansion and Digital Competency Support Policy"
         }
       ],
       "programs": [
         {
-          "id": "LT_BLM_04",
-          "name": "비즈니스보고서작성",
-          "en": "Business Report Writing",
+          "id": "HS_ISP_03",
+          "name": "지능형교통체계",
+          "en": "Intelligent Transportation Systems",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "파이썬 프로그래밍",
+          "hours": "24"
+        },
+        {
+          "id": "SS_SMR_05",
+          "name": "업무완결성증진",
+          "en": "Work Quality Enhancement",
+          "targetGroup": "다문화가정",
+          "org": "인사혁신처",
+          "competency": "UX/UI 디자인",
+          "hours": "16"
+        },
+        {
+          "id": "SS_SMA_04",
+          "name": "자기주도학습기법",
+          "en": "Self-Directed Learning",
+          "targetGroup": "다문화가정",
+          "org": "인사혁신처",
+          "competency": "디지털 마케팅",
+          "hours": "16"
+        },
+        {
+          "id": "LT_BLM_06",
+          "name": "선형대수학기초",
+          "en": "Linear Algebra",
           "targetGroup": "일반인",
           "org": "고용노동부",
           "competency": "녹색기술·탄소중립",
           "hours": "60"
         },
         {
-          "id": "HS_ISP_10",
-          "name": "전력망관리기술",
-          "en": "Smart Grid Management",
+          "id": "HS_ISP_07",
+          "name": "수도행정디지털화",
+          "en": "Digital Water Administration",
           "targetGroup": "재직자",
           "org": "과학기술정보통신부",
           "competency": "파이썬 프로그래밍",
-          "hours": "40"
+          "hours": "32"
+        },
+        {
+          "id": "SS_SMA_05",
+          "name": "회복탄력성강화",
+          "en": "Resilience Building",
+          "targetGroup": "다문화가정",
+          "org": "인사혁신처",
+          "competency": "디지털 마케팅",
+          "hours": "16"
         },
         {
           "id": "SS_SMR_07",
@@ -68,40 +104,13 @@
           "hours": "16"
         },
         {
-          "id": "SS_SMR_04",
-          "name": "프로페셔널리즘",
-          "en": "Professionalism",
-          "targetGroup": "다문화가정",
-          "org": "인사혁신처",
-          "competency": "UX/UI 디자인",
-          "hours": "16"
-        },
-        {
-          "id": "SS_SMR_06",
-          "name": "감정지능관리",
-          "en": "Emotional Intelligence",
-          "targetGroup": "다문화가정",
-          "org": "인사혁신처",
-          "competency": "UX/UI 디자인",
-          "hours": "16"
-        },
-        {
-          "id": "SS_SMR_09",
-          "name": "성과책임제이해",
-          "en": "Performance Accountability",
-          "targetGroup": "다문화가정",
-          "org": "인사혁신처",
-          "competency": "UX/UI 디자인",
-          "hours": "24"
-        },
-        {
-          "id": "HS_ISP_04",
-          "name": "재난안전관리시스템",
-          "en": "Disaster Safety Management Systems",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "32"
+          "id": "LT_BLM_04",
+          "name": "비즈니스보고서작성",
+          "en": "Business Report Writing",
+          "targetGroup": "일반인",
+          "org": "고용노동부",
+          "competency": "녹색기술·탄소중립",
+          "hours": "60"
         },
         {
           "id": "LT_BLM_08",
@@ -113,76 +122,40 @@
           "hours": "80"
         },
         {
-          "id": "SS_SMR_02",
-          "name": "목표달성실행력",
-          "en": "Goal Achievement Execution",
-          "targetGroup": "다문화가정",
-          "org": "인사혁신처",
-          "competency": "UX/UI 디자인",
-          "hours": "8"
+          "id": "LT_BLM_09",
+          "name": "비평적텍스트읽기",
+          "en": "Critical Reading",
+          "targetGroup": "일반인",
+          "org": "고용노동부",
+          "competency": "녹색기술·탄소중립",
+          "hours": "80"
         },
         {
-          "id": "HS_ISP_09",
-          "name": "지능형방범시스템",
-          "en": "AI-Based Crime Prevention Systems",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "40"
-        },
-        {
-          "id": "HS_ISP_03",
-          "name": "지능형교통체계",
-          "en": "Intelligent Transportation Systems",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "24"
-        },
-        {
-          "id": "HS_ISP_05",
-          "name": "에너지관리시스템",
-          "en": "Energy Management Systems",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "32"
-        },
-        {
-          "id": "SS_SMA_08",
-          "name": "새로운기술습득전략",
-          "en": "Learning New Technologies",
+          "id": "SS_SMA_03",
+          "name": "디지털전환적응훈련",
+          "en": "Digital Transformation Readiness",
           "targetGroup": "다문화가정",
           "org": "인사혁신처",
           "competency": "디지털 마케팅",
-          "hours": "24"
+          "hours": "8"
         },
         {
-          "id": "LT_BLM_01",
-          "name": "기술영어작문",
-          "en": "Technical English Writing",
+          "id": "LT_BLM_03",
+          "name": "확률과통계",
+          "en": "Probability & Statistics",
           "targetGroup": "일반인",
           "org": "고용노동부",
           "competency": "녹색기술·탄소중립",
           "hours": "40"
         },
         {
-          "id": "HS_ISP_06",
-          "name": "환경기술공학",
-          "en": "Environmental Technology Engineering",
+          "id": "HS_ISP_10",
+          "name": "전력망관리기술",
+          "en": "Smart Grid Management",
           "targetGroup": "재직자",
           "org": "과학기술정보통신부",
           "competency": "파이썬 프로그래밍",
-          "hours": "32"
-        },
-        {
-          "id": "SS_SMA_02",
-          "name": "변화적응력워크숍",
-          "en": "Change Adaptability",
-          "targetGroup": "다문화가정",
-          "org": "인사혁신처",
-          "competency": "디지털 마케팅",
-          "hours": "8"
+          "hours": "40"
         },
         {
           "id": "SS_SMA_07",
@@ -194,12 +167,21 @@
           "hours": "16"
         },
         {
-          "id": "HS_ISP_08",
-          "name": "공공데이터개방실무",
-          "en": "Open Government Data Practice",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "파이썬 프로그래밍",
+          "id": "LT_BLM_05",
+          "name": "논리적사고와글쓰기",
+          "en": "Logical Thinking & Writing",
+          "targetGroup": "일반인",
+          "org": "고용노동부",
+          "competency": "녹색기술·탄소중립",
+          "hours": "60"
+        },
+        {
+          "id": "LT_BLM_01",
+          "name": "기술영어작문",
+          "en": "Technical English Writing",
+          "targetGroup": "일반인",
+          "org": "고용노동부",
+          "competency": "녹색기술·탄소중립",
           "hours": "40"
         }
       ],
@@ -225,12 +207,6 @@
       "totalBudgetStr": "1350억원",
       "implementingOrgs": [
         {
-          "id": "ORG_MINISTRY_04",
-          "name": "고용노동부",
-          "abbr": "MoEL",
-          "role": "직업훈련·고용서비스·국민역량 평생학습"
-        },
-        {
           "id": "ORG_MINISTRY_01",
           "name": "과학기술정보통신부",
           "abbr": "MSIT",
@@ -243,6 +219,12 @@
           "role": "국가공무원 역량개발·성과관리 총괄"
         },
         {
+          "id": "ORG_MINISTRY_04",
+          "name": "고용노동부",
+          "abbr": "MoEL",
+          "role": "직업훈련·고용서비스·국민역량 평생학습"
+        },
+        {
           "id": "ORG_MINISTRY_05",
           "name": "기획재정부",
           "abbr": "MOF",
@@ -250,17 +232,11 @@
         }
       ],
       "targetGroups": [
-        "일반인",
         "재직자",
-        "다문화가정"
+        "다문화가정",
+        "일반인"
       ],
       "competencies": [
-        {
-          "id": "COMP_Green",
-          "name": "녹색기술·탄소중립",
-          "en": "Green Technology & Carbon Neutrality",
-          "category": "녹색기술·탄소중립 역량"
-        },
         {
           "id": "COMP_SW_01",
           "name": "파이썬 프로그래밍",
@@ -278,20 +254,26 @@
           "name": "디지털 마케팅",
           "en": "Digital Marketing",
           "category": "마케팅 전략 역량"
+        },
+        {
+          "id": "COMP_Green",
+          "name": "녹색기술·탄소중립",
+          "en": "Green Technology & Carbon Neutrality",
+          "category": "녹색기술·탄소중립 역량"
         }
       ],
       "performanceGoals": [
-        {
-          "code": "OUT_187",
-          "name": "디지털 역량 지원 성과",
-          "type": "역량성과",
-          "value": "350000"
-        },
         {
           "code": "OUT_186",
           "name": "전직 전환 훈련 성과",
           "type": "고용성과",
           "value": "28000"
+        },
+        {
+          "code": "OUT_187",
+          "name": "디지털 역량 지원 성과",
+          "type": "역량성과",
+          "value": "350000"
         }
       ],
       "policyCount": 2,
@@ -307,14 +289,14 @@
       "type": "NationalStrategy",
       "policies": [
         {
-          "id": "POLICY_22",
-          "name": "평생학습 활성화 방안",
-          "en": "Lifelong Learning Promotion Plan"
+          "id": "POLICY_19",
+          "name": "K-디지털 크레딧",
+          "en": "K-Digital Credit Program"
         },
         {
-          "id": "POLICY_55",
-          "name": "과학기술 외교 및 ODA 인재양성 정책",
-          "en": "Science and Technology Diplomacy and ODA Talent Development Policy"
+          "id": "POLICY_30",
+          "name": "소프트웨어 중심사회 인재양성 전략",
+          "en": "Software-Centric Society Talent Development Strategy"
         },
         {
           "id": "POLICY_21",
@@ -322,14 +304,14 @@
           "en": "Vocational Training Innovation Plan"
         },
         {
-          "id": "POLICY_19",
-          "name": "K-디지털 크레딧",
-          "en": "K-Digital Credit Program"
+          "id": "POLICY_27",
+          "name": "이러닝 산업 발전 및 인재양성",
+          "en": "E-Learning Industry Development and Talent Development"
         },
         {
-          "id": "POLICY_11",
-          "name": "디지털 인재양성 종합방안",
-          "en": "Digital Talent Development Master Plan"
+          "id": "POLICY_22",
+          "name": "평생학습 활성화 방안",
+          "en": "Lifelong Learning Promotion Plan"
         },
         {
           "id": "POLICY_02",
@@ -337,14 +319,29 @@
           "en": "Digital Transformation Education Program"
         },
         {
-          "id": "POLICY_13",
-          "name": "AI 일상화 및 산업 고도화 계획",
-          "en": "AI Mainstreaming and Industry Advancement Plan"
+          "id": "POLICY_55",
+          "name": "과학기술 외교 및 ODA 인재양성 정책",
+          "en": "Science and Technology Diplomacy and ODA Talent Development Policy"
+        },
+        {
+          "id": "POLICY_11",
+          "name": "디지털 인재양성 종합방안",
+          "en": "Digital Talent Development Master Plan"
+        },
+        {
+          "id": "POLICY_10",
+          "name": "K-컬처 콘텐츠 기획 인재 양성",
+          "en": "K-Culture Content Planning Talent Development"
         },
         {
           "id": "POLICY_49",
           "name": "AI 융합 의료·제약 전문인력 양성 정책",
           "en": "AI Convergence Medical and Pharmaceutical Professional Workforce Policy"
+        },
+        {
+          "id": "POLICY_18",
+          "name": "K-디지털 트레이닝",
+          "en": "K-Digital Training Program"
         },
         {
           "id": "POLICY_14",
@@ -357,32 +354,44 @@
           "en": "Middle-Aged Digital Literacy Education Program"
         },
         {
+          "id": "POLICY_13",
+          "name": "AI 일상화 및 산업 고도화 계획",
+          "en": "AI Mainstreaming and Industry Advancement Plan"
+        },
+        {
           "id": "POLICY_29",
           "name": "공공부문 AI·디지털 인재 육성",
           "en": "Public Sector AI and Digital Talent Development"
-        },
-        {
-          "id": "POLICY_30",
-          "name": "소프트웨어 중심사회 인재양성 전략",
-          "en": "Software-Centric Society Talent Development Strategy"
-        },
-        {
-          "id": "POLICY_10",
-          "name": "K-컬처 콘텐츠 기획 인재 양성",
-          "en": "K-Culture Content Planning Talent Development"
-        },
-        {
-          "id": "POLICY_18",
-          "name": "K-디지털 트레이닝",
-          "en": "K-Digital Training Program"
-        },
-        {
-          "id": "POLICY_27",
-          "name": "이러닝 산업 발전 및 인재양성",
-          "en": "E-Learning Industry Development and Talent Development"
         }
       ],
       "programs": [
+        {
+          "id": "SS_PSC_01",
+          "name": "디자인싱킹워크숍",
+          "en": "Design Thinking Workshop",
+          "targetGroup": "청소년",
+          "org": "교육부",
+          "competency": "파이썬 프로그래밍",
+          "hours": "8"
+        },
+        {
+          "id": "HS_IAI_09",
+          "name": "컨테이너오케스트레이션",
+          "en": "Container Orchestration",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "프롬프트 엔지니어링",
+          "hours": "40"
+        },
+        {
+          "id": "SS_PST_01",
+          "name": "비판적사고론",
+          "en": "Critical Thinking",
+          "targetGroup": "청소년",
+          "org": "교육부",
+          "competency": "프롬프트 엔지니어링",
+          "hours": "8"
+        },
         {
           "id": "SS_PSC_07",
           "name": "서비스경험설계",
@@ -391,15 +400,6 @@
           "org": "교육부",
           "competency": "파이썬 프로그래밍",
           "hours": "16"
-        },
-        {
-          "id": "SS_PST_03",
-          "name": "시스템다이내믹스",
-          "en": "System Dynamics",
-          "targetGroup": "청소년",
-          "org": "교육부",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "8"
         },
         {
           "id": "HS_IAI_10",
@@ -411,22 +411,31 @@
           "hours": "40"
         },
         {
-          "id": "SS_PST_10",
-          "name": "데이터기반논리",
-          "en": "Data-Driven Logic",
+          "id": "SS_PSC_08",
+          "name": "마인드맵과시각화",
+          "en": "Mind Mapping & Visualization",
+          "targetGroup": "청소년",
+          "org": "교육부",
+          "competency": "파이썬 프로그래밍",
+          "hours": "24"
+        },
+        {
+          "id": "SS_PST_08",
+          "name": "구조적사고워크숍",
+          "en": "Structured Thinking Workshop",
           "targetGroup": "청소년",
           "org": "교육부",
           "competency": "프롬프트 엔지니어링",
           "hours": "24"
         },
         {
-          "id": "SS_PSC_02",
-          "name": "아이디어발상기법",
-          "en": "Idea Generation Techniques",
+          "id": "SS_PSC_05",
+          "name": "브레인스토밍기법",
+          "en": "Brainstorming Techniques",
           "targetGroup": "청소년",
           "org": "교육부",
           "competency": "파이썬 프로그래밍",
-          "hours": "8"
+          "hours": "16"
         },
         {
           "id": "SS_PSC_10",
@@ -438,67 +447,31 @@
           "hours": "24"
         },
         {
-          "id": "SS_PSC_04",
-          "name": "창의적문제해결실무",
-          "en": "Creative Problem Solving",
-          "targetGroup": "청소년",
-          "org": "교육부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "16"
-        },
-        {
-          "id": "SS_PST_07",
-          "name": "복잡계이론의이해",
-          "en": "Complex Systems Theory",
-          "targetGroup": "청소년",
-          "org": "교육부",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "16"
-        },
-        {
-          "id": "HS_IAI_01",
-          "name": "GPU컴퓨팅기초",
-          "en": "GPU Computing Fundamentals",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "24"
-        },
-        {
-          "id": "SS_PSC_01",
-          "name": "디자인싱킹워크숍",
-          "en": "Design Thinking Workshop",
-          "targetGroup": "청소년",
-          "org": "교육부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "8"
-        },
-        {
-          "id": "HS_IAI_03",
-          "name": "클라우드아키텍처",
-          "en": "Cloud Architecture",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "24"
-        },
-        {
-          "id": "HS_IAI_05",
-          "name": "빅데이터플랫폼구축",
-          "en": "Big Data Platform Development",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "32"
-        },
-        {
-          "id": "SS_PSC_08",
-          "name": "마인드맵과시각화",
-          "en": "Mind Mapping & Visualization",
+          "id": "SS_PSC_09",
+          "name": "직관적사고훈련",
+          "en": "Intuitive Thinking Training",
           "targetGroup": "청소년",
           "org": "교육부",
           "competency": "파이썬 프로그래밍",
           "hours": "24"
+        },
+        {
+          "id": "SS_PST_09",
+          "name": "연역적추론실무",
+          "en": "Deductive Reasoning",
+          "targetGroup": "청소년",
+          "org": "교육부",
+          "competency": "프롬프트 엔지니어링",
+          "hours": "24"
+        },
+        {
+          "id": "HS_IAI_08",
+          "name": "분산시스템기초",
+          "en": "Distributed Systems",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "프롬프트 엔지니어링",
+          "hours": "40"
         }
       ],
       "budgets": [
@@ -591,22 +564,22 @@
       ],
       "performanceGoals": [
         {
-          "code": "OUT_17",
-          "name": "해외 기술연수 수료 및 글로벌 네트워크 구축",
-          "type": "역량성과",
-          "value": "15000000"
-        },
-        {
-          "code": "OUT_164",
-          "name": "평생학습 참여 확대",
-          "type": "역량성과",
-          "value": "15000000"
-        },
-        {
-          "code": "OUT_197",
-          "name": "과기 ODA 인재 양성",
+          "code": "OUT_28",
+          "name": "K-디지털 크레딧 과정 수료 및 직무 전환",
           "type": "교육성과",
-          "value": "1200"
+          "value": "1"
+        },
+        {
+          "code": "OUT_161",
+          "name": "K-디지털 크레딧 활용",
+          "type": "교육성과",
+          "value": "120000"
+        },
+        {
+          "code": "OUT_172",
+          "name": "SW 중심사회 인재 양성",
+          "type": "교육성과",
+          "value": "100000"
         },
         {
           "code": "OUT_19",
@@ -627,22 +600,28 @@
           "value": "95000"
         },
         {
-          "code": "OUT_28",
-          "name": "K-디지털 크레딧 과정 수료 및 직무 전환",
-          "type": "교육성과",
-          "value": "1"
+          "code": "OUT_23",
+          "name": "스마트 제조 도입으로 생산성 20% 향상",
+          "type": "생산성과",
+          "value": "20"
         },
         {
-          "code": "OUT_161",
-          "name": "K-디지털 크레딧 활용",
+          "code": "OUT_169",
+          "name": "이러닝 전문인력 양성",
           "type": "교육성과",
-          "value": "120000"
+          "value": "6000"
         },
         {
-          "code": "OUT_153",
-          "name": "디지털 인재 양성 수료",
-          "type": "교육성과",
-          "value": "500000"
+          "code": "OUT_17",
+          "name": "해외 기술연수 수료 및 글로벌 네트워크 구축",
+          "type": "역량성과",
+          "value": "15000000"
+        },
+        {
+          "code": "OUT_164",
+          "name": "평생학습 참여 확대",
+          "type": "역량성과",
+          "value": "15000000"
         }
       ],
       "policyCount": 15,
@@ -670,18 +649,9 @@
       ],
       "programs": [
         {
-          "id": "LT_CSV_03",
-          "name": "커뮤니티비즈니스",
-          "en": "Community Business",
-          "targetGroup": "취약계층",
-          "org": "인사혁신처",
-          "competency": "행정법무",
-          "hours": "40"
-        },
-        {
-          "id": "LT_CSV_05",
-          "name": "지속가능발전론",
-          "en": "Sustainable Development",
+          "id": "LT_CSV_07",
+          "name": "사회혁신방법론",
+          "en": "Social Innovation Methods",
           "targetGroup": "취약계층",
           "org": "인사혁신처",
           "competency": "행정법무",
@@ -697,9 +667,9 @@
           "hours": "40"
         },
         {
-          "id": "LT_CSV_09",
-          "name": "민주주의와거버넌스",
-          "en": "Democracy & Governance",
+          "id": "LT_CSV_10",
+          "name": "환경윤리실무",
+          "en": "Environmental Ethics",
           "targetGroup": "취약계층",
           "org": "인사혁신처",
           "competency": "행정법무",
@@ -715,6 +685,15 @@
           "hours": "60"
         },
         {
+          "id": "LT_CSV_05",
+          "name": "지속가능발전론",
+          "en": "Sustainable Development",
+          "targetGroup": "취약계층",
+          "org": "인사혁신처",
+          "competency": "행정법무",
+          "hours": "60"
+        },
+        {
           "id": "LT_CSV_06",
           "name": "인권과기술",
           "en": "Human Rights & Technology",
@@ -724,18 +703,18 @@
           "hours": "60"
         },
         {
-          "id": "LT_CSV_07",
-          "name": "사회혁신방법론",
-          "en": "Social Innovation Methods",
+          "id": "LT_CSV_03",
+          "name": "커뮤니티비즈니스",
+          "en": "Community Business",
           "targetGroup": "취약계층",
           "org": "인사혁신처",
           "competency": "행정법무",
-          "hours": "60"
+          "hours": "40"
         },
         {
-          "id": "LT_CSV_10",
-          "name": "환경윤리실무",
-          "en": "Environmental Ethics",
+          "id": "LT_CSV_09",
+          "name": "민주주의와거버넌스",
+          "en": "Democracy & Governance",
           "targetGroup": "취약계층",
           "org": "인사혁신처",
           "competency": "행정법무",
@@ -837,17 +816,53 @@
           "en": "Carbon Neutral Green Technology Professional Workforce Development Plan"
         },
         {
-          "id": "POLICY_40",
-          "name": "원자력 인재양성 및 전문성 강화 계획",
-          "en": "Nuclear Energy Talent Development and Expertise Enhancement Plan"
-        },
-        {
           "id": "POLICY_39",
           "name": "수소경제 인력양성 종합계획",
           "en": "Hydrogen Economy Workforce Development Master Plan"
+        },
+        {
+          "id": "POLICY_40",
+          "name": "원자력 인재양성 및 전문성 강화 계획",
+          "en": "Nuclear Energy Talent Development and Expertise Enhancement Plan"
         }
       ],
       "programs": [
+        {
+          "id": "SS_IPC_06",
+          "name": "비즈니스네트워킹",
+          "en": "Business Networking",
+          "targetGroup": "경력단절여성",
+          "org": "인사혁신처",
+          "competency": "디지털 마케팅",
+          "hours": "16"
+        },
+        {
+          "id": "SS_IPC_05",
+          "name": "대인관계심리학",
+          "en": "Interpersonal Psychology",
+          "targetGroup": "경력단절여성",
+          "org": "인사혁신처",
+          "competency": "디지털 마케팅",
+          "hours": "16"
+        },
+        {
+          "id": "SS_IPC_04",
+          "name": "협업도구마스터",
+          "en": "Collaboration Tools Mastery",
+          "targetGroup": "경력단절여성",
+          "org": "인사혁신처",
+          "competency": "디지털 마케팅",
+          "hours": "16"
+        },
+        {
+          "id": "SS_IPC_03",
+          "name": "퍼실리테이션실무",
+          "en": "Facilitation Skills",
+          "targetGroup": "경력단절여성",
+          "org": "인사혁신처",
+          "competency": "디지털 마케팅",
+          "hours": "8"
+        },
         {
           "id": "SS_IPC_08",
           "name": "비폭력대화법",
@@ -883,42 +898,6 @@
           "org": "인사혁신처",
           "competency": "디지털 마케팅",
           "hours": "24"
-        },
-        {
-          "id": "SS_IPC_06",
-          "name": "비즈니스네트워킹",
-          "en": "Business Networking",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "디지털 마케팅",
-          "hours": "16"
-        },
-        {
-          "id": "SS_IPC_04",
-          "name": "협업도구마스터",
-          "en": "Collaboration Tools Mastery",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "디지털 마케팅",
-          "hours": "16"
-        },
-        {
-          "id": "SS_IPC_05",
-          "name": "대인관계심리학",
-          "en": "Interpersonal Psychology",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "디지털 마케팅",
-          "hours": "16"
-        },
-        {
-          "id": "SS_IPC_03",
-          "name": "퍼실리테이션실무",
-          "en": "Facilitation Skills",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "디지털 마케팅",
-          "hours": "8"
         },
         {
           "id": "SS_IPC_09",
@@ -1003,16 +982,16 @@
           "value": "8000"
         },
         {
-          "code": "OUT_182",
-          "name": "원자력 전문인력 양성",
-          "type": "교육성과",
-          "value": "2000"
-        },
-        {
           "code": "OUT_181",
           "name": "수소경제 인력 양성",
           "type": "교육성과",
           "value": "3500"
+        },
+        {
+          "code": "OUT_182",
+          "name": "원자력 전문인력 양성",
+          "type": "교육성과",
+          "value": "2000"
         }
       ],
       "policyCount": 3,
@@ -1028,9 +1007,9 @@
       "type": "NationalStrategy",
       "policies": [
         {
-          "id": "POLICY_09",
-          "name": "지식재산(IP) 보호 강화 사업",
-          "en": "Intellectual Property Protection Enhancement Program"
+          "id": "POLICY_26",
+          "name": "방위산업 전문인력 양성 계획",
+          "en": "Defense Industry Workforce Development Plan"
         },
         {
           "id": "POLICY_51",
@@ -1038,9 +1017,9 @@
           "en": "Defense and Security Cyber Talent Development Policy"
         },
         {
-          "id": "POLICY_12",
-          "name": "반도체 인재양성 전략",
-          "en": "Semiconductor Workforce Development Strategy"
+          "id": "POLICY_52",
+          "name": "해양 스마트·디지털 기술인력 양성 정책",
+          "en": "Maritime Smart and Digital Technology Workforce Development Policy"
         },
         {
           "id": "POLICY_03",
@@ -1048,9 +1027,14 @@
           "en": "Global Technology Export Voucher Program"
         },
         {
-          "id": "POLICY_15",
-          "name": "바이오헬스 인재양성 종합방안",
-          "en": "Bio-Health Workforce Development Comprehensive Plan"
+          "id": "POLICY_25",
+          "name": "스마트제조 인재양성 방안",
+          "en": "Smart Manufacturing Talent Development Plan"
+        },
+        {
+          "id": "POLICY_12",
+          "name": "반도체 인재양성 전략",
+          "en": "Semiconductor Workforce Development Strategy"
         },
         {
           "id": "POLICY_17",
@@ -1058,14 +1042,9 @@
           "en": "Space and Aerospace Talent Development Plan"
         },
         {
-          "id": "POLICY_50",
-          "name": "사이버보안 핵심인재 집중 육성 정책",
-          "en": "Cybersecurity Core Talent Intensive Development Policy"
-        },
-        {
-          "id": "POLICY_25",
-          "name": "스마트제조 인재양성 방안",
-          "en": "Smart Manufacturing Talent Development Plan"
+          "id": "POLICY_08",
+          "name": "반도체 설계 베테랑 전수 사업",
+          "en": "Semiconductor Design Veteran Knowledge Transfer Program"
         },
         {
           "id": "POLICY_53",
@@ -1073,98 +1052,62 @@
           "en": "Agri-Food Smart Farm Professional Workforce Development Policy"
         },
         {
+          "id": "POLICY_09",
+          "name": "지식재산(IP) 보호 강화 사업",
+          "en": "Intellectual Property Protection Enhancement Program"
+        },
+        {
           "id": "POLICY_23",
           "name": "국가기술자격제도 혁신방안",
           "en": "National Skills Certification System Innovation Plan"
         },
         {
-          "id": "POLICY_08",
-          "name": "반도체 설계 베테랑 전수 사업",
-          "en": "Semiconductor Design Veteran Knowledge Transfer Program"
+          "id": "POLICY_50",
+          "name": "사이버보안 핵심인재 집중 육성 정책",
+          "en": "Cybersecurity Core Talent Intensive Development Policy"
         },
         {
-          "id": "POLICY_26",
-          "name": "방위산업 전문인력 양성 계획",
-          "en": "Defense Industry Workforce Development Plan"
-        },
-        {
-          "id": "POLICY_52",
-          "name": "해양 스마트·디지털 기술인력 양성 정책",
-          "en": "Maritime Smart and Digital Technology Workforce Development Policy"
+          "id": "POLICY_15",
+          "name": "바이오헬스 인재양성 종합방안",
+          "en": "Bio-Health Workforce Development Comprehensive Plan"
         }
       ],
       "programs": [
         {
-          "id": "HS_BAM_04",
-          "name": "공급망관리",
-          "en": "Supply Chain Management",
-          "targetGroup": "전문가",
-          "org": "고용노동부",
-          "competency": "행정법무",
-          "hours": "32"
-        },
-        {
-          "id": "HS_BAM_10",
-          "name": "창업시뮬레이션",
-          "en": "Startup Business Simulation",
+          "id": "HS_BAM_08",
+          "name": "프로젝트파이낸싱",
+          "en": "Project Financing",
           "targetGroup": "전문가",
           "org": "고용노동부",
           "competency": "행정법무",
           "hours": "40"
         },
         {
-          "id": "LT_DTS_07",
-          "name": "보안거버넌스실무",
-          "en": "Security Governance",
+          "id": "LT_DTS_02",
+          "name": "디지털저작권관리",
+          "en": "Digital Rights Management",
           "targetGroup": "일반인",
           "org": "문화체육관광부",
           "competency": "파이썬 프로그래밍",
-          "hours": "60"
+          "hours": "40"
         },
         {
-          "id": "SS_IPL_06",
-          "name": "조직문화혁신론",
-          "en": "Organizational Culture Innovation",
+          "id": "SS_IPL_03",
+          "name": "목표관리OKR리더십",
+          "en": "OKR-Based Leadership",
           "targetGroup": "취약계층",
           "org": "국방부",
           "competency": "데이터 분석",
-          "hours": "16"
+          "hours": "8"
         },
         {
-          "id": "LT_DTS_04",
-          "name": "피싱및해킹방지",
-          "en": "Anti-Phishing & Hacking Prevention",
+          "id": "LT_DTS_03",
+          "name": "사이버보안인식",
+          "en": "Cyber Security Awareness",
           "targetGroup": "일반인",
           "org": "문화체육관광부",
           "competency": "파이썬 프로그래밍",
-          "hours": "60"
-        },
-        {
-          "id": "LT_DTS_08",
-          "name": "IT컴플라이언스",
-          "en": "IT Compliance",
-          "targetGroup": "일반인",
-          "org": "문화체육관광부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "80"
-        },
-        {
-          "id": "SS_IPL_07",
-          "name": "전략적임파워먼트",
-          "en": "Strategic Empowerment",
-          "targetGroup": "취약계층",
-          "org": "국방부",
-          "competency": "데이터 분석",
-          "hours": "16"
-        },
-        {
-          "id": "LT_DTS_05",
-          "name": "클라우드보안기초",
-          "en": "Cloud Security Fundamentals",
-          "targetGroup": "일반인",
-          "org": "문화체육관광부",
-          "competency": "파이썬 프로그래밍",
-          "hours": "60"
+          "hours": "40"
         },
         {
           "id": "LT_DTS_06",
@@ -1176,31 +1119,49 @@
           "hours": "60"
         },
         {
-          "id": "HS_BAM_01",
-          "name": "전략기획실무",
-          "en": "Strategic Planning Fundamentals",
+          "id": "LT_DTS_04",
+          "name": "피싱및해킹방지",
+          "en": "Anti-Phishing & Hacking Prevention",
+          "targetGroup": "일반인",
+          "org": "문화체육관광부",
+          "competency": "파이썬 프로그래밍",
+          "hours": "60"
+        },
+        {
+          "id": "HS_BAM_03",
+          "name": "인사조직관리",
+          "en": "HR & Organization Management",
           "targetGroup": "전문가",
           "org": "고용노동부",
           "competency": "행정법무",
           "hours": "24"
         },
         {
-          "id": "SS_IPL_02",
-          "name": "애자일코칭실무",
-          "en": "Agile Coaching",
+          "id": "HS_BAM_07",
+          "name": "재무제표분석",
+          "en": "Financial Statement Analysis",
+          "targetGroup": "전문가",
+          "org": "고용노동부",
+          "competency": "행정법무",
+          "hours": "32"
+        },
+        {
+          "id": "SS_IPL_10",
+          "name": "감성리더십실무",
+          "en": "Emotional Intelligence Leadership",
           "targetGroup": "취약계층",
           "org": "국방부",
           "competency": "데이터 분석",
-          "hours": "8"
+          "hours": "24"
         },
         {
-          "id": "LT_DTS_09",
-          "name": "네트워크보안기초",
-          "en": "Network Security Fundamentals",
+          "id": "LT_DTS_07",
+          "name": "보안거버넌스실무",
+          "en": "Security Governance",
           "targetGroup": "일반인",
           "org": "문화체육관광부",
           "competency": "파이썬 프로그래밍",
-          "hours": "80"
+          "hours": "60"
         },
         {
           "id": "SS_IPL_05",
@@ -1210,6 +1171,15 @@
           "org": "국방부",
           "competency": "데이터 분석",
           "hours": "16"
+        },
+        {
+          "id": "HS_BAM_01",
+          "name": "전략기획실무",
+          "en": "Strategic Planning Fundamentals",
+          "targetGroup": "전문가",
+          "org": "고용노동부",
+          "competency": "행정법무",
+          "hours": "24"
         }
       ],
       "budgets": [
@@ -1349,10 +1319,16 @@
       ],
       "performanceGoals": [
         {
-          "code": "OUT_152",
-          "name": "지식재산 보호 역량 향상",
-          "type": "기술성과",
-          "value": "1200"
+          "code": "OUT_21",
+          "name": "창업 후 연간 매출 10억 달성",
+          "type": "창업성과",
+          "value": "1000000000"
+        },
+        {
+          "code": "OUT_168",
+          "name": "방위산업 전문인력 배출",
+          "type": "교육성과",
+          "value": "3200"
         },
         {
           "code": "OUT_193",
@@ -1361,10 +1337,10 @@
           "value": "1800"
         },
         {
-          "code": "OUT_154",
-          "name": "반도체 전문인력 배출",
+          "code": "OUT_194",
+          "name": "해양 스마트 기술인력 배출",
           "type": "교육성과",
-          "value": "12000"
+          "value": "3500"
         },
         {
           "code": "OUT_05",
@@ -1379,16 +1355,16 @@
           "value": "8000000"
         },
         {
-          "code": "OUT_14",
-          "name": "바이오헬스 신약 후보물질 연구 참여",
-          "type": "연구성과",
-          "value": "3"
+          "code": "OUT_12",
+          "name": "청년내일채움공제 만기 수령 및 재취업",
+          "type": "고용성과",
+          "value": "18000000"
         },
         {
-          "code": "OUT_157",
-          "name": "바이오헬스 인재 양성",
-          "type": "교육성과",
-          "value": "8000"
+          "code": "OUT_167",
+          "name": "스마트제조 인재 배출",
+          "type": "고용성과",
+          "value": "18000000"
         }
       ],
       "policyCount": 13,
@@ -1420,40 +1396,13 @@
           "hours": "24"
         },
         {
-          "id": "HS_BAS_02",
-          "name": "고객관계관리",
-          "en": "Customer Relationship Management",
+          "id": "HS_BAS_05",
+          "name": "세일즈협상론",
+          "en": "Sales Negotiation Skills",
           "targetGroup": "전문가",
           "org": "과학기술정보통신부",
           "competency": "데이터 분석",
-          "hours": "24"
-        },
-        {
-          "id": "HS_ITM_05",
-          "name": "제조실행시스템",
-          "en": "Manufacturing Execution Systems",
-          "targetGroup": "재직자",
-          "org": "산업통상자원부",
-          "competency": "반도체 설계·공정",
           "hours": "32"
-        },
-        {
-          "id": "HS_ITM_06",
-          "name": "산업용로봇운용",
-          "en": "Industrial Robot Operation",
-          "targetGroup": "재직자",
-          "org": "산업통상자원부",
-          "competency": "반도체 설계·공정",
-          "hours": "32"
-        },
-        {
-          "id": "HS_ITM_10",
-          "name": "스마트물류자동화",
-          "en": "Smart Logistics Automation",
-          "targetGroup": "재직자",
-          "org": "산업통상자원부",
-          "competency": "반도체 설계·공정",
-          "hours": "40"
         },
         {
           "id": "HS_ITM_01",
@@ -1462,87 +1411,6 @@
           "targetGroup": "재직자",
           "org": "산업통상자원부",
           "competency": "반도체 설계·공정",
-          "hours": "24"
-        },
-        {
-          "id": "HS_ITM_07",
-          "name": "설비보전실무",
-          "en": "Equipment Maintenance Practice",
-          "targetGroup": "재직자",
-          "org": "산업통상자원부",
-          "competency": "반도체 설계·공정",
-          "hours": "32"
-        },
-        {
-          "id": "HS_BAS_10",
-          "name": "시장조사실무",
-          "en": "Market Research Practice",
-          "targetGroup": "전문가",
-          "org": "과학기술정보통신부",
-          "competency": "데이터 분석",
-          "hours": "40"
-        },
-        {
-          "id": "HS_BMS_09",
-          "name": "검색엔진최적화",
-          "en": "Search Engine Optimization",
-          "targetGroup": "전문가",
-          "org": "국방부",
-          "competency": "바이오헬스",
-          "hours": "40"
-        },
-        {
-          "id": "HS_ITM_09",
-          "name": "정밀공정공학",
-          "en": "Precision Process Engineering",
-          "targetGroup": "재직자",
-          "org": "산업통상자원부",
-          "competency": "반도체 설계·공정",
-          "hours": "40"
-        },
-        {
-          "id": "HS_BMS_04",
-          "name": "소비자행동론",
-          "en": "Consumer Behavior",
-          "targetGroup": "전문가",
-          "org": "국방부",
-          "competency": "바이오헬스",
-          "hours": "32"
-        },
-        {
-          "id": "HS_BMS_05",
-          "name": "콘텐츠마케팅전략",
-          "en": "Content Marketing Strategy",
-          "targetGroup": "전문가",
-          "org": "국방부",
-          "competency": "바이오헬스",
-          "hours": "32"
-        },
-        {
-          "id": "HS_BAS_08",
-          "name": "유통물류관리",
-          "en": "Distribution & Logistics Management",
-          "targetGroup": "전문가",
-          "org": "과학기술정보통신부",
-          "competency": "데이터 분석",
-          "hours": "40"
-        },
-        {
-          "id": "HS_ITM_02",
-          "name": "공정자동화설계",
-          "en": "Process Automation Design",
-          "targetGroup": "재직자",
-          "org": "산업통상자원부",
-          "competency": "반도체 설계·공정",
-          "hours": "24"
-        },
-        {
-          "id": "HS_BMS_02",
-          "name": "브랜드자산관리",
-          "en": "Brand Asset Management",
-          "targetGroup": "전문가",
-          "org": "국방부",
-          "competency": "바이오헬스",
           "hours": "24"
         },
         {
@@ -1555,13 +1423,67 @@
           "hours": "32"
         },
         {
-          "id": "HS_BAS_04",
-          "name": "글로벌영업실무",
-          "en": "Global Sales Practice",
+          "id": "HS_ITM_04",
+          "name": "PLC프로그래밍",
+          "en": "PLC Programming",
+          "targetGroup": "재직자",
+          "org": "산업통상자원부",
+          "competency": "반도체 설계·공정",
+          "hours": "32"
+        },
+        {
+          "id": "HS_BMS_05",
+          "name": "콘텐츠마케팅전략",
+          "en": "Content Marketing Strategy",
+          "targetGroup": "전문가",
+          "org": "국방부",
+          "competency": "바이오헬스",
+          "hours": "32"
+        },
+        {
+          "id": "HS_BMS_09",
+          "name": "검색엔진최적화",
+          "en": "Search Engine Optimization",
+          "targetGroup": "전문가",
+          "org": "국방부",
+          "competency": "바이오헬스",
+          "hours": "40"
+        },
+        {
+          "id": "HS_BMS_02",
+          "name": "브랜드자산관리",
+          "en": "Brand Asset Management",
+          "targetGroup": "전문가",
+          "org": "국방부",
+          "competency": "바이오헬스",
+          "hours": "24"
+        },
+        {
+          "id": "HS_ITM_06",
+          "name": "산업용로봇운용",
+          "en": "Industrial Robot Operation",
+          "targetGroup": "재직자",
+          "org": "산업통상자원부",
+          "competency": "반도체 설계·공정",
+          "hours": "32"
+        },
+        {
+          "id": "HS_BAS_02",
+          "name": "고객관계관리",
+          "en": "Customer Relationship Management",
           "targetGroup": "전문가",
           "org": "과학기술정보통신부",
           "competency": "데이터 분석",
-          "hours": "32"
+          "hours": "24"
+        },
+        {
+          "id": "HS_ITM_02",
+          "name": "공정자동화설계",
+          "en": "Process Automation Design",
+          "targetGroup": "재직자",
+          "org": "산업통상자원부",
+          "competency": "반도체 설계·공정",
+          "hours": "24"
         },
         {
           "id": "HS_ITM_08",
@@ -1573,13 +1495,58 @@
           "hours": "40"
         },
         {
-          "id": "HS_BMS_08",
-          "name": "마케팅ROI분석",
-          "en": "Marketing ROI Analysis",
+          "id": "HS_BAS_10",
+          "name": "시장조사실무",
+          "en": "Market Research Practice",
+          "targetGroup": "전문가",
+          "org": "과학기술정보통신부",
+          "competency": "데이터 분석",
+          "hours": "40"
+        },
+        {
+          "id": "HS_BMS_04",
+          "name": "소비자행동론",
+          "en": "Consumer Behavior",
           "targetGroup": "전문가",
           "org": "국방부",
           "competency": "바이오헬스",
+          "hours": "32"
+        },
+        {
+          "id": "HS_ITM_10",
+          "name": "스마트물류자동화",
+          "en": "Smart Logistics Automation",
+          "targetGroup": "재직자",
+          "org": "산업통상자원부",
+          "competency": "반도체 설계·공정",
           "hours": "40"
+        },
+        {
+          "id": "HS_ITM_07",
+          "name": "설비보전실무",
+          "en": "Equipment Maintenance Practice",
+          "targetGroup": "재직자",
+          "org": "산업통상자원부",
+          "competency": "반도체 설계·공정",
+          "hours": "32"
+        },
+        {
+          "id": "HS_BMS_03",
+          "name": "통합마케팅커뮤니케이션",
+          "en": "Integrated Marketing Communications",
+          "targetGroup": "전문가",
+          "org": "국방부",
+          "competency": "바이오헬스",
+          "hours": "24"
+        },
+        {
+          "id": "HS_BMS_07",
+          "name": "소셜미디어전략",
+          "en": "Social Media Strategy",
+          "targetGroup": "전문가",
+          "org": "국방부",
+          "competency": "바이오헬스",
+          "hours": "32"
         },
         {
           "id": "HS_BMS_10",
@@ -1588,6 +1555,15 @@
           "targetGroup": "전문가",
           "org": "국방부",
           "competency": "바이오헬스",
+          "hours": "40"
+        },
+        {
+          "id": "HS_ITM_09",
+          "name": "정밀공정공학",
+          "en": "Precision Process Engineering",
+          "targetGroup": "재직자",
+          "org": "산업통상자원부",
+          "competency": "반도체 설계·공정",
           "hours": "40"
         }
       ],
@@ -1695,33 +1671,6 @@
       ],
       "programs": [
         {
-          "id": "LT_DDF_04",
-          "name": "데이터수집과정제",
-          "en": "Data Collection & Preprocessing",
-          "targetGroup": "경력단절여성",
-          "org": "고용노동부",
-          "competency": "데이터 분석",
-          "hours": "60"
-        },
-        {
-          "id": "LT_DAI_04",
-          "name": "인공지능이해와활용",
-          "en": "AI Applications in Practice",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "60"
-        },
-        {
-          "id": "LT_DAI_07",
-          "name": "노코드툴활용",
-          "en": "No-Code Tool Applications",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "60"
-        },
-        {
           "id": "HS_ISW_03",
           "name": "리액트웹아키텍처",
           "en": "React Web Architecture",
@@ -1731,9 +1680,45 @@
           "hours": "24"
         },
         {
-          "id": "LT_BCF_06",
-          "name": "시스템프로그래밍",
-          "en": "Systems Programming",
+          "id": "HS_ISW_06",
+          "name": "디자인패턴실무",
+          "en": "Design Patterns in Practice",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "클라우드 보안",
+          "hours": "32"
+        },
+        {
+          "id": "HS_ISW_05",
+          "name": "알고리즘최적화",
+          "en": "Algorithm Optimization",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "클라우드 보안",
+          "hours": "32"
+        },
+        {
+          "id": "HS_ISW_09",
+          "name": "데이터베이스정규화",
+          "en": "Database Normalization",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "클라우드 보안",
+          "hours": "40"
+        },
+        {
+          "id": "LT_DDF_05",
+          "name": "대시보드활용실무",
+          "en": "Dashboard Practice",
+          "targetGroup": "경력단절여성",
+          "org": "고용노동부",
+          "competency": "데이터 분석",
+          "hours": "60"
+        },
+        {
+          "id": "LT_BCF_07",
+          "name": "데이터베이스개론",
+          "en": "Database Fundamentals",
           "targetGroup": "은퇴자",
           "org": "고용노동부",
           "competency": "디지털 마케팅",
@@ -1749,49 +1734,40 @@
           "hours": "40"
         },
         {
-          "id": "LT_DDF_08",
-          "name": "데이터기반스토리텔링",
-          "en": "Data Storytelling",
+          "id": "HS_ISW_10",
+          "name": "API설계기법",
+          "en": "API Design Techniques",
+          "targetGroup": "재직자",
+          "org": "과학기술정보통신부",
+          "competency": "클라우드 보안",
+          "hours": "40"
+        },
+        {
+          "id": "LT_BCF_05",
+          "name": "정보통신공학개론",
+          "en": "Introduction to ICT Engineering",
+          "targetGroup": "은퇴자",
+          "org": "고용노동부",
+          "competency": "디지털 마케팅",
+          "hours": "60"
+        },
+        {
+          "id": "LT_DAI_06",
+          "name": "온라인협업도구실무",
+          "en": "Online Collaboration Tools",
+          "targetGroup": "경력단절여성",
+          "org": "인사혁신처",
+          "competency": "프롬프트 엔지니어링",
+          "hours": "60"
+        },
+        {
+          "id": "LT_DDF_09",
+          "name": "정량적성과지표설계",
+          "en": "KPI Design & Measurement",
           "targetGroup": "경력단절여성",
           "org": "고용노동부",
           "competency": "데이터 분석",
           "hours": "80"
-        },
-        {
-          "id": "HS_ISW_05",
-          "name": "알고리즘최적화",
-          "en": "Algorithm Optimization",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "클라우드 보안",
-          "hours": "32"
-        },
-        {
-          "id": "LT_DAI_08",
-          "name": "디지털콘텐츠제작",
-          "en": "Digital Content Creation",
-          "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "80"
-        },
-        {
-          "id": "LT_BCF_10",
-          "name": "컴퓨터구조론",
-          "en": "Computer Architecture",
-          "targetGroup": "은퇴자",
-          "org": "고용노동부",
-          "competency": "디지털 마케팅",
-          "hours": "80"
-        },
-        {
-          "id": "HS_ISW_07",
-          "name": "테스트자동화공학",
-          "en": "Test Automation Engineering",
-          "targetGroup": "재직자",
-          "org": "과학기술정보통신부",
-          "competency": "클라우드 보안",
-          "hours": "32"
         },
         {
           "id": "LT_DAI_02",
@@ -1803,31 +1779,22 @@
           "hours": "40"
         },
         {
-          "id": "LT_BCF_01",
-          "name": "이산수학기초",
-          "en": "Discrete Mathematics",
-          "targetGroup": "은퇴자",
+          "id": "LT_DDF_02",
+          "name": "데이터시각화리터러시",
+          "en": "Data Visualization Literacy",
+          "targetGroup": "경력단절여성",
           "org": "고용노동부",
-          "competency": "디지털 마케팅",
+          "competency": "데이터 분석",
           "hours": "40"
         },
         {
-          "id": "LT_DAI_05",
-          "name": "디지털디바이스운용",
-          "en": "Digital Device Proficiency",
+          "id": "LT_DDF_08",
+          "name": "데이터기반스토리텔링",
+          "en": "Data Storytelling",
           "targetGroup": "경력단절여성",
-          "org": "인사혁신처",
-          "competency": "프롬프트 엔지니어링",
-          "hours": "60"
-        },
-        {
-          "id": "LT_BCF_07",
-          "name": "데이터베이스개론",
-          "en": "Database Fundamentals",
-          "targetGroup": "은퇴자",
           "org": "고용노동부",
-          "competency": "디지털 마케팅",
-          "hours": "60"
+          "competency": "데이터 분석",
+          "hours": "80"
         }
       ],
       "budgets": [
@@ -1844,6 +1811,12 @@
       "totalBudgetStr": "200억원",
       "implementingOrgs": [
         {
+          "id": "ORG_MINISTRY_01",
+          "name": "과학기술정보통신부",
+          "abbr": "MSIT",
+          "role": "디지털 전환·AI·ICT 인재 양성 정책 총괄"
+        },
+        {
           "id": "ORG_MINISTRY_04",
           "name": "고용노동부",
           "abbr": "MoEL",
@@ -1856,12 +1829,6 @@
           "role": "국가공무원 역량개발·성과관리 총괄"
         },
         {
-          "id": "ORG_MINISTRY_01",
-          "name": "과학기술정보통신부",
-          "abbr": "MSIT",
-          "role": "디지털 전환·AI·ICT 인재 양성 정책 총괄"
-        },
-        {
           "id": "ORG_MINISTRY_11",
           "name": "행정안전부",
           "abbr": "MOIS",
@@ -1869,23 +1836,11 @@
         }
       ],
       "targetGroups": [
-        "경력단절여성",
         "재직자",
+        "경력단절여성",
         "은퇴자"
       ],
       "competencies": [
-        {
-          "id": "COMP_DataAnalysis",
-          "name": "데이터 분석",
-          "en": "Data Analysis",
-          "category": "데이터 활용 역량"
-        },
-        {
-          "id": "COMP_AI_01",
-          "name": "프롬프트 엔지니어링",
-          "en": "Prompt Engineering",
-          "category": "AI·인프라 역량"
-        },
         {
           "id": "COMP_CloudSec",
           "name": "클라우드 보안",
@@ -1893,10 +1848,22 @@
           "category": "기술보안 역량"
         },
         {
+          "id": "COMP_DataAnalysis",
+          "name": "데이터 분석",
+          "en": "Data Analysis",
+          "category": "데이터 활용 역량"
+        },
+        {
           "id": "COMP_DigitalMkt",
           "name": "디지털 마케팅",
           "en": "Digital Marketing",
           "category": "마케팅 전략 역량"
+        },
+        {
+          "id": "COMP_AI_01",
+          "name": "프롬프트 엔지니어링",
+          "en": "Prompt Engineering",
+          "category": "AI·인프라 역량"
         }
       ],
       "performanceGoals": [
@@ -1920,29 +1887,9 @@
       "type": "NationalStrategy",
       "policies": [
         {
-          "id": "POLICY_32",
-          "name": "고령자·중장년 재취업 역량강화 정책",
-          "en": "Senior and Middle-Aged Re-employment Competency Enhancement Policy"
-        },
-        {
-          "id": "POLICY_24",
-          "name": "청년 취업역량 강화 지원사업",
-          "en": "Youth Employment Capability Enhancement Program"
-        },
-        {
-          "id": "POLICY_34",
-          "name": "사회서비스 종사자 처우개선 및 역량강화 정책",
-          "en": "Social Service Worker Treatment Improvement and Capacity Enhancement Policy"
-        },
-        {
           "id": "POLICY_01",
           "name": "은퇴과학자 활용 지원사업",
           "en": "Retired Scientist Utilization Support Program"
-        },
-        {
-          "id": "POLICY_04",
-          "name": "시니어 창업 지원금",
-          "en": "Senior Startup Support Grant"
         },
         {
           "id": "POLICY_31",
@@ -1953,6 +1900,26 @@
           "id": "POLICY_33",
           "name": "다문화가정 직업훈련 및 사회통합 정책",
           "en": "Multicultural Family Vocational Training and Social Integration Policy"
+        },
+        {
+          "id": "POLICY_32",
+          "name": "고령자·중장년 재취업 역량강화 정책",
+          "en": "Senior and Middle-Aged Re-employment Competency Enhancement Policy"
+        },
+        {
+          "id": "POLICY_34",
+          "name": "사회서비스 종사자 처우개선 및 역량강화 정책",
+          "en": "Social Service Worker Treatment Improvement and Capacity Enhancement Policy"
+        },
+        {
+          "id": "POLICY_24",
+          "name": "청년 취업역량 강화 지원사업",
+          "en": "Youth Employment Capability Enhancement Program"
+        },
+        {
+          "id": "POLICY_04",
+          "name": "시니어 창업 지원금",
+          "en": "Senior Startup Support Grant"
         }
       ],
       "programs": [],
@@ -2022,30 +1989,6 @@
       "competencies": [],
       "performanceGoals": [
         {
-          "code": "OUT_174",
-          "name": "중장년 재취업 성과",
-          "type": "고용성과",
-          "value": "35000"
-        },
-        {
-          "code": "OUT_27",
-          "name": "취업성공패키지 수료 후 6개월 내 취업",
-          "type": "고용성과",
-          "value": "1"
-        },
-        {
-          "code": "OUT_166",
-          "name": "청년 취업역량 향상",
-          "type": "고용성과",
-          "value": "45000"
-        },
-        {
-          "code": "OUT_176",
-          "name": "사회서비스 종사자 역량 향상",
-          "type": "역량성과",
-          "value": "45000"
-        },
-        {
           "code": "OUT_01",
           "name": "기업 매출 증대 / 기업 매출 증대 성과",
           "type": "경영성과",
@@ -2064,10 +2007,28 @@
           "value": "4000000"
         },
         {
-          "code": "OUT_06",
-          "name": "스타트업 신규 고용 창출",
+          "code": "OUT_173",
+          "name": "장애인 고용 역량 강화",
           "type": "고용성과",
-          "value": "50000000"
+          "value": "8500"
+        },
+        {
+          "code": "OUT_175",
+          "name": "다문화가정 직업훈련 성과",
+          "type": "교육성과",
+          "value": "12000"
+        },
+        {
+          "code": "OUT_174",
+          "name": "중장년 재취업 성과",
+          "type": "고용성과",
+          "value": "35000"
+        },
+        {
+          "code": "OUT_176",
+          "name": "사회서비스 종사자 역량 향상",
+          "type": "역량성과",
+          "value": "45000"
         }
       ],
       "policyCount": 7,
@@ -2083,6 +2044,21 @@
       "type": "NationalStrategy",
       "policies": [
         {
+          "id": "POLICY_35",
+          "name": "지방대학 혁신역량 강화 방안",
+          "en": "Regional University Innovation Capacity Enhancement Plan"
+        },
+        {
+          "id": "POLICY_37",
+          "name": "스마트빌리지 및 농촌 디지털 전환 지원 정책",
+          "en": "Smart Village and Rural Digital Transformation Support Policy"
+        },
+        {
+          "id": "POLICY_36",
+          "name": "지역산업 맞춤형 인력양성 사업",
+          "en": "Region-Customized Industrial Workforce Development Project"
+        },
+        {
           "id": "POLICY_05",
           "name": "지역사회 기술봉사 마일리지",
           "en": "Community Technology Volunteering Mileage Program"
@@ -2091,21 +2067,6 @@
           "id": "POLICY_28",
           "name": "지역 주도형 청년 일자리 사업",
           "en": "Region-Led Youth Employment Program"
-        },
-        {
-          "id": "POLICY_37",
-          "name": "스마트빌리지 및 농촌 디지털 전환 지원 정책",
-          "en": "Smart Village and Rural Digital Transformation Support Policy"
-        },
-        {
-          "id": "POLICY_35",
-          "name": "지방대학 혁신역량 강화 방안",
-          "en": "Regional University Innovation Capacity Enhancement Plan"
-        },
-        {
-          "id": "POLICY_36",
-          "name": "지역산업 맞춤형 인력양성 사업",
-          "en": "Region-Customized Industrial Workforce Development Project"
         }
       ],
       "programs": [],
@@ -2161,6 +2122,24 @@
       "competencies": [],
       "performanceGoals": [
         {
+          "code": "OUT_177",
+          "name": "지방대학 혁신 성과",
+          "type": "교육성과",
+          "value": "180"
+        },
+        {
+          "code": "OUT_179",
+          "name": "농촌 디지털 전환 역량",
+          "type": "역량성과",
+          "value": "15000"
+        },
+        {
+          "code": "OUT_178",
+          "name": "지역 산업 맞춤 인력 배출",
+          "type": "고용성과",
+          "value": "22000"
+        },
+        {
           "code": "OUT_09",
           "name": "지역 기술 만족도 상승",
           "type": "사회성과",
@@ -2177,24 +2156,6 @@
           "name": "지역 청년 일자리 창출",
           "type": "고용성과",
           "value": "25000"
-        },
-        {
-          "code": "OUT_179",
-          "name": "농촌 디지털 전환 역량",
-          "type": "역량성과",
-          "value": "15000"
-        },
-        {
-          "code": "OUT_177",
-          "name": "지방대학 혁신 성과",
-          "type": "교육성과",
-          "value": "180"
-        },
-        {
-          "code": "OUT_178",
-          "name": "지역 산업 맞춤 인력 배출",
-          "type": "고용성과",
-          "value": "22000"
         }
       ],
       "policyCount": 5,
@@ -2210,6 +2171,11 @@
       "type": "NationalStrategy",
       "policies": [
         {
+          "id": "POLICY_43",
+          "name": "일·가정양립 지원 기업 인사 관리자 역량강화 정책",
+          "en": "Work-Family Balance Supporting Company HR Manager Capacity Policy"
+        },
+        {
           "id": "POLICY_42",
           "name": "보육교사 전문성 제고 및 처우개선 방안",
           "en": "Childcare Teacher Professionalism Enhancement and Treatment Improvement Plan"
@@ -2218,11 +2184,6 @@
           "id": "POLICY_41",
           "name": "육아휴직 후 경력복귀 지원 정책",
           "en": "Post-Parental Leave Career Return Support Policy"
-        },
-        {
-          "id": "POLICY_43",
-          "name": "일·가정양립 지원 기업 인사 관리자 역량강화 정책",
-          "en": "Work-Family Balance Supporting Company HR Manager Capacity Policy"
         }
       ],
       "programs": [],
@@ -2278,6 +2239,12 @@
       "competencies": [],
       "performanceGoals": [
         {
+          "code": "OUT_185",
+          "name": "일가정양립 HR 역량 강화",
+          "type": "역량성과",
+          "value": "5500"
+        },
+        {
           "code": "OUT_184",
           "name": "보육교사 전문성 향상",
           "type": "역량성과",
@@ -2288,12 +2255,6 @@
           "name": "경력복귀 지원 성과",
           "type": "고용성과",
           "value": "18000"
-        },
-        {
-          "code": "OUT_185",
-          "name": "일가정양립 HR 역량 강화",
-          "type": "역량성과",
-          "value": "5500"
         }
       ],
       "policyCount": 3,
@@ -2314,14 +2275,14 @@
           "en": "Financial Consumer Protection Professional Workforce Development Policy"
         },
         {
-          "id": "POLICY_48",
-          "name": "노동권 보호 및 노사관계 전문인력 역량강화 정책",
-          "en": "Labor Rights Protection and Industrial Relations Professional Capacity Policy"
-        },
-        {
           "id": "POLICY_46",
           "name": "소상공인 디지털 전환 역량강화 지원 정책",
           "en": "Small Business Digital Transformation Capacity Enhancement Support Policy"
+        },
+        {
+          "id": "POLICY_48",
+          "name": "노동권 보호 및 노사관계 전문인력 역량강화 정책",
+          "en": "Labor Rights Protection and Industrial Relations Professional Capacity Policy"
         }
       ],
       "programs": [],
@@ -2383,16 +2344,16 @@
           "value": "2800"
         },
         {
-          "code": "OUT_190",
-          "name": "노동권 전문인력 역량 향상",
-          "type": "역량성과",
-          "value": "3200"
-        },
-        {
           "code": "OUT_188",
           "name": "소상공인 디지털 전환",
           "type": "역량성과",
           "value": "85000"
+        },
+        {
+          "code": "OUT_190",
+          "name": "노동권 전문인력 역량 향상",
+          "type": "역량성과",
+          "value": "3200"
         }
       ],
       "policyCount": 3,
@@ -13020,193 +12981,17 @@
       "hours": "24"
     },
     {
-      "id": "FE_CSM_01",
-      "name": "소비자교육프로그램",
-      "en": "Consumer Education Program",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_05",
-      "org": "기획재정부",
-      "orgAbbr": "MOF",
-      "alignedStrategy": "공정경제민주화",
-      "competency": "품질지향",
-      "competencyEn": "Quality Orientation",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_89",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_89",
-        "COMP_54",
-        "COMP_90",
-        "COMP_50"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KWDI_02",
-      "name": "성평등정책연구",
-      "en": "Gender Equality Policy Research",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_15",
-      "org": "한국여성정책연구원",
-      "orgAbbr": "KWDI",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "공동체의식",
-      "competencyEn": "Community Awareness",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_52",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_52",
-        "COMP_27",
-        "COMP_50"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KEA_03",
-      "name": "탄소중립실천교육",
-      "en": "Carbon Neutral Practice",
+      "id": "MOJ_03",
+      "name": "출입국관리실무",
+      "en": "Immigration Management Practice",
       "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_16",
-      "org": "한국에너지공단",
-      "orgAbbr": "KEA",
-      "alignedStrategy": "탄소중립·재생에너지",
-      "competency": "녹색기술·탄소중립",
-      "competencyEn": "Green Technology & Carbon Neutrality",
-      "competencyCategory": "녹색기술·탄소중립 역량",
-      "targetCompetencyId": "COMP_Green",
-      "fieldCatCode": "COMPCAT_Green_Tech",
-      "relatedCompetencyIds": [
-        "COMP_Green",
-        "COMP_52",
-        "COMP_54"
-      ],
-      "budgetCode": "",
-      "hours": "12"
-    },
-    {
-      "id": "HRD_01",
-      "name": "NCS기반훈련설계",
-      "en": "NCS-based Training Design",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_01",
-      "org": "한국산업인력공단",
-      "orgAbbr": "HRD-Korea",
-      "alignedStrategy": "전략기술주권",
-      "competency": "프로젝트관리",
-      "competencyEn": "Project Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_35",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_35",
-        "COMP_Semiconductor",
-        "COMP_27"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "MOF_SEA_03",
-      "name": "해운물류디지털화",
-      "en": "Shipping Logistics Digitalization",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_15",
-      "org": "해양수산부",
-      "orgAbbr": "MOF_Sea",
-      "alignedStrategy": "인공지능주권",
-      "competency": "IT활용",
-      "competencyEn": "IT Proficiency",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_38",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_38",
-        "COMP_35",
-        "COMP_27"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KLI_03",
-      "name": "고용정책연구방법",
-      "en": "Employment Policy Research Methods",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_08",
-      "org": "한국노동연구원",
-      "orgAbbr": "KLI",
-      "alignedStrategy": "전국민기본소득",
-      "competency": "문제해결",
-      "competencyEn": "Problem Solving",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_26",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_26",
-        "COMP_32",
-        "COMP_35"
-      ],
-      "budgetCode": "",
-      "hours": "12"
-    },
-    {
-      "id": "KOTECH_03",
-      "name": "현장실습교육방법론",
-      "en": "Field Practice Education Methods",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_11",
-      "org": "한국기술교육대학교",
-      "orgAbbr": "KOTECH",
-      "alignedStrategy": "전략기술주권",
-      "competency": "창의성",
-      "competencyEn": "Creativity",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_25",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_25",
-        "COMP_34",
-        "COMP_27"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "MOJ_01",
-      "name": "법무행정교육",
-      "en": "Legal Administration Education",
-      "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
       "orgId": "ORG_MINISTRY_18",
       "org": "법무부",
       "orgAbbr": "MOJ",
-      "alignedStrategy": "디지털플랫폼정부",
+      "alignedStrategy": "포용적복지국가",
       "competency": "행정법무",
       "competencyEn": "Administrative Law",
       "competencyCategory": "행정법무 역량",
@@ -13214,83 +12999,33 @@
       "fieldCatCode": "COMPCAT_AdminLaw",
       "relatedCompetencyIds": [
         "COMP_AdminLaw",
-        "COMP_35",
-        "COMP_44"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "KRIVET_02",
-      "name": "자격제도정책연구",
-      "en": "Qualification Policy Research",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_02",
-      "org": "한국직업능력연구원",
-      "orgAbbr": "KRIVET",
-      "alignedStrategy": "인공지능주권",
-      "competency": "프로젝트관리",
-      "competencyEn": "Project Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_35",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_35",
-        "COMP_25",
-        "COMP_28"
+        "COMP_22",
+        "COMP_27"
       ],
       "budgetCode": "",
       "hours": "12"
     },
     {
-      "id": "KEA_01",
-      "name": "신재생에너지기술교육",
-      "en": "Renewable Energy Technology",
-      "type": "K_DigitalTraining",
+      "id": "NHRDI_02",
+      "name": "신임관리자연수",
+      "en": "New Manager Training",
+      "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_16",
-      "org": "한국에너지공단",
-      "orgAbbr": "KEA",
-      "alignedStrategy": "탄소중립·재생에너지",
-      "competency": "녹색기술·탄소중립",
-      "competencyEn": "Green Technology & Carbon Neutrality",
-      "competencyCategory": "녹색기술·탄소중립 역량",
-      "targetCompetencyId": "COMP_Green",
-      "fieldCatCode": "COMPCAT_Green_Tech",
-      "relatedCompetencyIds": [
-        "COMP_Green",
-        "COMP_34",
-        "COMP_38"
-      ],
-      "budgetCode": "",
-      "hours": "30"
-    },
-    {
-      "id": "NILE_03",
-      "name": "디지털학습환경구축",
-      "en": "Digital Learning Environment",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_03",
-      "org": "국가평생교육진흥원",
-      "orgAbbr": "NILE",
+      "orgId": "ORG_INSTITUTE_09",
+      "org": "국가공무원인재개발원",
+      "orgAbbr": "NHRDI",
       "alignedStrategy": "디지털플랫폼정부",
-      "competency": "IT활용",
-      "competencyEn": "IT Proficiency",
+      "competency": "성과관리",
+      "competencyEn": "Performance Management",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_38",
-      "fieldCatCode": "COMPCAT_Technical",
+      "targetCompetencyId": "COMP_60",
+      "fieldCatCode": "COMPCAT_Capability",
       "relatedCompetencyIds": [
-        "COMP_38",
-        "COMP_CloudSec",
-        "COMP_DataAnalysis"
+        "COMP_60",
+        "COMP_63",
+        "COMP_31"
       ],
       "budgetCode": "",
       "hours": "24"
@@ -13321,938 +13056,9 @@
       "hours": "30"
     },
     {
-      "id": "KEIS_02",
-      "name": "직업진로탐색교육",
-      "en": "Career Exploration Education",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_04",
-      "org": "한국고용정보원",
-      "orgAbbr": "KEIS",
-      "alignedStrategy": "전국민기본소득",
-      "competency": "학습능력",
-      "competencyEn": "Learning Ability",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_30",
-      "fieldCatCode": "COMPCAT_Learning",
-      "relatedCompetencyIds": [
-        "COMP_30",
-        "COMP_25",
-        "COMP_47"
-      ],
-      "budgetCode": "",
-      "hours": "12"
-    },
-    {
-      "id": "ENV_02",
-      "name": "환경영향평가실무",
-      "en": "Environmental Impact Assessment",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_12",
-      "org": "환경부",
-      "orgAbbr": "MOE_Env",
-      "alignedStrategy": "탄소중립·재생에너지",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
-      "relatedCompetencyIds": [
-        "COMP_AdminLaw",
-        "COMP_27",
-        "COMP_50"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "MOJ_03",
-      "name": "출입국관리실무",
-      "en": "Immigration Management Practice",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_18",
-      "org": "법무부",
-      "orgAbbr": "MOJ",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
-      "relatedCompetencyIds": [
-        "COMP_AdminLaw",
-        "COMP_22",
-        "COMP_27"
-      ],
-      "budgetCode": "",
-      "hours": "12"
-    },
-    {
-      "id": "MAFRA_02",
-      "name": "식품안전관리실무",
-      "en": "Food Safety Management",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_14",
-      "org": "농림축산식품부",
-      "orgAbbr": "MAFRA",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
-      "relatedCompetencyIds": [
-        "COMP_AdminLaw",
-        "COMP_52",
-        "COMP_27"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KLI_02",
-      "name": "노사관계교육",
-      "en": "Labour-Management Relations",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_08",
-      "org": "한국노동연구원",
-      "orgAbbr": "KLI",
-      "alignedStrategy": "공정경제민주화",
-      "competency": "갈등해결",
-      "competencyEn": "Conflict Resolution",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_19",
-      "fieldCatCode": "COMPCAT_Interpersonal",
-      "relatedCompetencyIds": [
-        "COMP_19",
-        "COMP_22",
-        "COMP_18"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "ENV_01",
-      "name": "탄소중립정책실무",
-      "en": "Carbon Neutral Policy Practice",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_12",
-      "org": "환경부",
-      "orgAbbr": "MOE_Env",
-      "alignedStrategy": "탄소중립·재생에너지",
-      "competency": "녹색기술·탄소중립",
-      "competencyEn": "Green Technology & Carbon Neutrality",
-      "competencyCategory": "녹색기술·탄소중립 역량",
-      "targetCompetencyId": "COMP_Green",
-      "fieldCatCode": "COMPCAT_Green_Tech",
-      "relatedCompetencyIds": [
-        "COMP_Green",
-        "COMP_52",
-        "COMP_54"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "NILE_01",
-      "name": "K_MOOC학습설계",
-      "en": "K-MOOC Learning Design",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_03",
-      "org": "국가평생교육진흥원",
-      "orgAbbr": "NILE",
-      "alignedStrategy": "인공지능주권",
-      "competency": "글쓰기",
-      "competencyEn": "Writing",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_55",
-      "fieldCatCode": "COMPCAT_Communication",
-      "relatedCompetencyIds": [
-        "COMP_55",
-        "COMP_57",
-        "COMP_30"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "FSC_02",
-      "name": "핀테크정책교육",
-      "en": "FinTech Policy Education",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_19",
-      "org": "금융위원회",
-      "orgAbbr": "FSC",
-      "alignedStrategy": "인공지능주권",
-      "competency": "코딩",
-      "competencyEn": "Programming",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_40",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_40",
-        "COMP_38",
-        "COMP_AI_01"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "NILE_02",
-      "name": "평생학습도시운영",
-      "en": "Lifelong Learning City Operations",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_03",
-      "org": "국가평생교육진흥원",
-      "orgAbbr": "NILE",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "공동체의식",
-      "competencyEn": "Community Awareness",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_52",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_52",
-        "COMP_30",
-        "COMP_51"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "HRD_02",
-      "name": "직업훈련교사연수",
-      "en": "Vocational Training Instructor",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_01",
-      "org": "한국산업인력공단",
-      "orgAbbr": "HRD-Korea",
-      "alignedStrategy": "전략기술주권",
-      "competency": "인재육성",
-      "competencyEn": "Talent Development",
-      "competencyCategory": "리더십 역량",
-      "targetCompetencyId": "COMP_65",
-      "fieldCatCode": "COMPCAT_Leadership",
-      "relatedCompetencyIds": [
-        "COMP_65",
-        "COMP_31",
-        "COMP_34"
-      ],
-      "budgetCode": "",
-      "hours": "40"
-    },
-    {
-      "id": "NHRDI_01",
-      "name": "고위공무원과정",
-      "en": "Senior Civil Servant Programme",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_09",
-      "org": "국가공무원인재개발원",
-      "orgAbbr": "NHRDI",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "비전수립",
-      "competencyEn": "Vision Setting",
-      "competencyCategory": "리더십 역량",
-      "targetCompetencyId": "COMP_62",
-      "fieldCatCode": "COMPCAT_Leadership",
-      "relatedCompetencyIds": [
-        "COMP_62",
-        "COMP_61",
-        "COMP_17"
-      ],
-      "budgetCode": "",
-      "hours": "40"
-    },
-    {
-      "id": "KPC_01",
-      "name": "경영혁신실무",
-      "en": "Business Innovation Practice",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_10",
-      "org": "한국생산성본부",
-      "orgAbbr": "KPC",
-      "alignedStrategy": "전략기술주권",
-      "competency": "경영전략",
-      "competencyEn": "Business Strategy",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_69",
-      "fieldCatCode": "COMPCAT_Strategic",
-      "relatedCompetencyIds": [
-        "COMP_69",
-        "COMP_50",
-        "COMP_25"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "SME_02",
-      "name": "벤처기업역량강화",
-      "en": "Venture Business Capacity Building",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_10",
-      "org": "중소벤처기업부",
-      "orgAbbr": "MSS",
-      "alignedStrategy": "전략기술주권",
-      "competency": "경영전략",
-      "competencyEn": "Business Strategy",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_69",
-      "fieldCatCode": "COMPCAT_Strategic",
-      "relatedCompetencyIds": [
-        "COMP_69",
-        "COMP_26",
-        "COMP_31"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "LB_CHD_02",
-      "name": "보육시설운영관리과정",
-      "en": "Childcare Facility Management Program",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_02",
-      "org": "교육부",
-      "orgAbbr": "MOE",
-      "alignedStrategy": "저출생극복",
-      "competency": "성과관리",
-      "competencyEn": "Performance Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_60",
-      "fieldCatCode": "COMPCAT_Capability",
-      "relatedCompetencyIds": [
-        "COMP_60",
-        "COMP_35",
-        "COMP_64",
-        "COMP_31"
-      ],
-      "budgetCode": "",
-      "hours": "40"
-    },
-    {
-      "id": "MAFRA_01",
-      "name": "스마트팜기술교육",
-      "en": "Smart Farm Technology",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_14",
-      "org": "농림축산식품부",
-      "orgAbbr": "MAFRA",
-      "alignedStrategy": "전략기술주권",
-      "competency": "IT활용",
-      "competencyEn": "IT Proficiency",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_38",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_38",
-        "COMP_40",
-        "COMP_34"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "KRIVET_01",
-      "name": "직업능력개발연구방법론",
-      "en": "Vocational HRD Research Methods",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_02",
-      "org": "한국직업능력연구원",
-      "orgAbbr": "KRIVET",
-      "alignedStrategy": "전략기술주권",
-      "competency": "문제해결",
-      "competencyEn": "Problem Solving",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_26",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_26",
-        "COMP_27",
-        "COMP_32"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "WT_WLF_02",
-      "name": "사회서비스투자사업",
-      "en": "Community Services Investment Program",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_07",
-      "org": "보건복지부",
-      "orgAbbr": "MoHW",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "협력정신",
-      "competencyEn": "Collaboration Spirit",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_51",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_51",
-        "COMP_52",
-        "COMP_53",
-        "COMP_24"
-      ],
-      "budgetCode": "",
-      "hours": "32"
-    },
-    {
-      "id": "SME_03",
-      "name": "소상공인경영개선",
-      "en": "Small Business Management",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_10",
-      "org": "중소벤처기업부",
-      "orgAbbr": "MSS",
-      "alignedStrategy": "공정경제민주화",
-      "competency": "성과관리",
-      "competencyEn": "Performance Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_60",
-      "fieldCatCode": "COMPCAT_Capability",
-      "relatedCompetencyIds": [
-        "COMP_60",
-        "COMP_27",
-        "COMP_22"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "KPC_02",
-      "name": "스마트팩토리실무",
-      "en": "Smart Factory Practice",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_10",
-      "org": "한국생산성본부",
-      "orgAbbr": "KPC",
-      "alignedStrategy": "전략기술주권",
-      "competency": "반도체 설계·공정",
-      "competencyEn": "Semiconductor Design & Process",
-      "competencyCategory": "반도체 설계 역량",
-      "targetCompetencyId": "COMP_Semiconductor",
-      "fieldCatCode": "COMPCAT_Semiconductor_Design",
-      "relatedCompetencyIds": [
-        "COMP_Semiconductor",
-        "COMP_38",
-        "COMP_40"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "MOLIT_03",
-      "name": "건설안전관리",
-      "en": "Construction Safety Management",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_13",
-      "org": "국토교통부",
-      "orgAbbr": "MOLIT",
-      "alignedStrategy": "전략기술주권",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
-      "relatedCompetencyIds": [
-        "COMP_AdminLaw",
-        "COMP_44",
-        "COMP_27"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "MOJ_02",
-      "name": "교정정책실무",
-      "en": "Correctional Policy Practice",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_18",
-      "org": "법무부",
-      "orgAbbr": "MOJ",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
-      "relatedCompetencyIds": [
-        "COMP_AdminLaw",
-        "COMP_52",
-        "COMP_43"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "RD_LYJ_01",
-      "name": "지역주도형청년일자리사업",
-      "en": "Local-led Youth Job Program",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_11",
-      "org": "행정안전부",
-      "orgAbbr": "MOIS",
-      "alignedStrategy": "지역균형발전",
-      "competency": "프로젝트관리",
-      "competencyEn": "Project Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_35",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_35",
-        "COMP_60",
-        "COMP_64",
-        "COMP_22"
-      ],
-      "budgetCode": "",
-      "hours": "36"
-    },
-    {
-      "id": "WT_WLF_01",
-      "name": "청년사회서비스사업",
-      "en": "Youth Social Service Program",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_07",
-      "org": "보건복지부",
-      "orgAbbr": "MoHW",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "공동체의식",
-      "competencyEn": "Community Awareness",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_52",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_52",
-        "COMP_51",
-        "COMP_22",
-        "COMP_79"
-      ],
-      "budgetCode": "",
-      "hours": "40"
-    },
-    {
-      "id": "KLI_01",
-      "name": "노동시장분석방법",
-      "en": "Labour Market Analysis Methods",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_08",
-      "org": "한국노동연구원",
-      "orgAbbr": "KLI",
-      "alignedStrategy": "전국민기본소득",
-      "competency": "분석력",
-      "competencyEn": "Analytical Thinking",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_27",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_27",
-        "COMP_DataAnalysis",
-        "COMP_28"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KPC_03",
-      "name": "생산성향상과정",
-      "en": "Productivity Improvement",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_10",
-      "org": "한국생산성본부",
-      "orgAbbr": "KPC",
-      "alignedStrategy": "인공지능주권",
-      "competency": "프로젝트관리",
-      "competencyEn": "Project Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_35",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_35",
-        "COMP_27",
-        "COMP_45"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "FSC_03",
-      "name": "자본시장교육",
-      "en": "Capital Market Education",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_19",
-      "org": "금융위원회",
-      "orgAbbr": "FSC",
-      "alignedStrategy": "공정경제민주화",
-      "competency": "재무관리",
-      "competencyEn": "Financial Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_36",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_36",
-        "COMP_69",
-        "COMP_DataAnalysis"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KRIVET_03",
-      "name": "NCS개발방법론",
-      "en": "NCS Development Methodology",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_02",
-      "org": "한국직업능력연구원",
-      "orgAbbr": "KRIVET",
-      "alignedStrategy": "전략기술주권",
-      "competency": "분석력",
-      "competencyEn": "Analytical Thinking",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_27",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_27",
-        "COMP_55",
-        "COMP_30"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "KIPA_03",
-      "name": "공공리더십교육",
-      "en": "Public Sector Leadership",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_14",
-      "org": "한국행정연구원",
-      "orgAbbr": "KIPA",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "리더십",
-      "competencyEn": "Leadership",
-      "competencyCategory": "리더십 역량",
-      "targetCompetencyId": "COMP_61",
-      "fieldCatCode": "COMPCAT_Leadership",
-      "relatedCompetencyIds": [
-        "COMP_61",
-        "COMP_62",
-        "COMP_22"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "HRD_03",
-      "name": "국가기술자격교육",
-      "en": "National Technical Qualification",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_01",
-      "org": "한국산업인력공단",
-      "orgAbbr": "HRD-Korea",
-      "alignedStrategy": "전략기술주권",
-      "competency": "반도체 설계·공정",
-      "competencyEn": "Semiconductor Design & Process",
-      "competencyCategory": "반도체 설계 역량",
-      "targetCompetencyId": "COMP_Semiconductor",
-      "fieldCatCode": "COMPCAT_Semiconductor_Design",
-      "relatedCompetencyIds": [
-        "COMP_Semiconductor",
-        "COMP_Shipbuilding",
-        "COMP_Mobility"
-      ],
-      "budgetCode": "",
-      "hours": "30"
-    },
-    {
-      "id": "NHRDI_03",
-      "name": "디지털행정교육",
-      "en": "Digital Government Education",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_09",
-      "org": "국가공무원인재개발원",
-      "orgAbbr": "NHRDI",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "IT활용",
-      "competencyEn": "IT Proficiency",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_38",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_38",
-        "COMP_CloudSec",
-        "COMP_DataAnalysis"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "KWDI_01",
-      "name": "여성경력개발과정",
-      "en": "Women Career Development",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_15",
-      "org": "한국여성정책연구원",
-      "orgAbbr": "KWDI",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "자기개발",
-      "competencyEn": "Self Development",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_31",
-      "fieldCatCode": "COMPCAT_Learning",
-      "relatedCompetencyIds": [
-        "COMP_31",
-        "COMP_45",
-        "COMP_22"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "KOSAF_01",
-      "name": "학생리더십개발과정",
-      "en": "Student Leadership Development",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_13",
-      "org": "한국장학재단",
-      "orgAbbr": "KOSAF",
-      "alignedStrategy": "저출생극복",
-      "competency": "리더십",
-      "competencyEn": "Leadership",
-      "competencyCategory": "리더십 역량",
-      "targetCompetencyId": "COMP_61",
-      "fieldCatCode": "COMPCAT_Leadership",
-      "relatedCompetencyIds": [
-        "COMP_61",
-        "COMP_62",
-        "COMP_22"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "NIPA_02",
-      "name": "클라우드실무교육",
-      "en": "Cloud Computing Practice",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_05",
-      "org": "정보통신산업진흥원",
-      "orgAbbr": "NIPA",
-      "alignedStrategy": "인공지능주권",
-      "competency": "클라우드 보안",
-      "competencyEn": "Cloud Security",
-      "competencyCategory": "기술보안 역량",
-      "targetCompetencyId": "COMP_CloudSec",
-      "fieldCatCode": "COMPCAT_Tech_Security",
-      "relatedCompetencyIds": [
-        "COMP_CloudSec",
-        "COMP_38",
-        "COMP_40"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "KIPA_02",
-      "name": "정책분석실무",
-      "en": "Policy Analysis Practice",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_14",
-      "org": "한국행정연구원",
-      "orgAbbr": "KIPA",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "분석력",
-      "competencyEn": "Analytical Thinking",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_27",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_27",
-        "COMP_28",
-        "COMP_32"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "SME_01",
-      "name": "창업생태계조성실무",
-      "en": "Startup Ecosystem Management",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_10",
-      "org": "중소벤처기업부",
-      "orgAbbr": "MSS",
-      "alignedStrategy": "인공지능주권",
-      "competency": "프로젝트관리",
-      "competencyEn": "Project Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_35",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_35",
-        "COMP_25",
-        "COMP_40"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "MOF_SEA_02",
-      "name": "수산자원관리실무",
-      "en": "Fisheries Resource Management",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_15",
-      "org": "해양수산부",
-      "orgAbbr": "MOF_Sea",
-      "alignedStrategy": "탄소중립·재생에너지",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
-      "relatedCompetencyIds": [
-        "COMP_AdminLaw",
-        "COMP_52",
-        "COMP_35"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "NIPA_03",
-      "name": "ICT융합기술교육",
-      "en": "ICT Convergence Technology",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_05",
-      "org": "정보통신산업진흥원",
-      "orgAbbr": "NIPA",
-      "alignedStrategy": "전략기술주권",
-      "competency": "코딩",
-      "competencyEn": "Programming",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_40",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_40",
-        "COMP_38",
-        "COMP_25"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "FE_FTC_01",
-      "name": "공정거래기본종합과정",
-      "en": "Fair Trade Fundamentals Course",
+      "id": "FE_CSM_01",
+      "name": "소비자교육프로그램",
+      "en": "Consumer Education Program",
       "type": "WorkshopSeminar",
       "targetGroupId": "",
       "targetGroup": "",
@@ -14261,116 +13067,16 @@
       "org": "기획재정부",
       "orgAbbr": "MOF",
       "alignedStrategy": "공정경제민주화",
-      "competency": "윤리경영",
-      "competencyEn": "Ethical Business Practice",
+      "competency": "품질지향",
+      "competencyEn": "Quality Orientation",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_54",
+      "targetCompetencyId": "COMP_89",
       "fieldCatCode": "COMPCAT_Values",
       "relatedCompetencyIds": [
-        "COMP_54",
         "COMP_89",
+        "COMP_54",
         "COMP_90",
-        "COMP_43"
-      ],
-      "budgetCode": "",
-      "hours": "48"
-    },
-    {
-      "id": "MOGEF_01",
-      "name": "성평등정책교육",
-      "en": "Gender Equality Policy Education",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_16",
-      "org": "여성가족부",
-      "orgAbbr": "MOGEF",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "공동체의식",
-      "competencyEn": "Community Awareness",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_52",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_52",
-        "COMP_22",
-        "COMP_51"
-      ],
-      "budgetCode": "",
-      "hours": "12"
-    },
-    {
-      "id": "KIPA_01",
-      "name": "행정혁신과정",
-      "en": "Administrative Innovation",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_14",
-      "org": "한국행정연구원",
-      "orgAbbr": "KIPA",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "혁신마인드",
-      "competencyEn": "Innovation Mindset",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_50",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_50",
-        "COMP_35",
-        "COMP_69"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "MOFA_01",
-      "name": "국제협상실무",
-      "en": "International Negotiation Practice",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_17",
-      "org": "외교부",
-      "orgAbbr": "MOFA",
-      "alignedStrategy": "전략기술주권",
-      "competency": "협상",
-      "competencyEn": "Negotiation",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_18",
-      "fieldCatCode": "COMPCAT_Interpersonal",
-      "relatedCompetencyIds": [
-        "COMP_18",
-        "COMP_22",
-        "COMP_72"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "KEDI_01",
-      "name": "교육정책연구실무",
-      "en": "Education Policy Research",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_07",
-      "org": "한국교육개발원",
-      "orgAbbr": "KEDI",
-      "alignedStrategy": "인공지능주권",
-      "competency": "분석력",
-      "competencyEn": "Analytical Thinking",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_27",
-      "fieldCatCode": "COMPCAT_Thinking",
-      "relatedCompetencyIds": [
-        "COMP_27",
-        "COMP_28",
-        "COMP_35"
+        "COMP_50"
       ],
       "budgetCode": "",
       "hours": "16"
@@ -14401,81 +13107,6 @@
       "hours": "20"
     },
     {
-      "id": "KEIS_01",
-      "name": "취업역량강화과정",
-      "en": "Employment Competency Enhancement",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_04",
-      "org": "한국고용정보원",
-      "orgAbbr": "KEIS",
-      "alignedStrategy": "전국민기본소득",
-      "competency": "자기개발",
-      "competencyEn": "Self Development",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_31",
-      "fieldCatCode": "COMPCAT_Learning",
-      "relatedCompetencyIds": [
-        "COMP_31",
-        "COMP_45",
-        "COMP_22"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
-      "id": "KEDI_03",
-      "name": "교육통계분석교육",
-      "en": "Education Statistics Analysis",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_07",
-      "org": "한국교육개발원",
-      "orgAbbr": "KEDI",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "데이터 분석",
-      "competencyEn": "Data Analysis",
-      "competencyCategory": "데이터 활용 역량",
-      "targetCompetencyId": "COMP_DataAnalysis",
-      "fieldCatCode": "COMPCAT_Data_Fluency",
-      "relatedCompetencyIds": [
-        "COMP_DataAnalysis",
-        "COMP_27",
-        "COMP_38"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "KISA_03",
-      "name": "개인정보보호과정",
-      "en": "Personal Data Protection",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_12",
-      "org": "한국인터넷진흥원",
-      "orgAbbr": "KISA",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "클라우드 보안",
-      "competencyEn": "Cloud Security",
-      "competencyCategory": "기술보안 역량",
-      "targetCompetencyId": "COMP_CloudSec",
-      "fieldCatCode": "COMPCAT_Tech_Security",
-      "relatedCompetencyIds": [
-        "COMP_CloudSec",
-        "COMP_AdminLaw",
-        "COMP_52"
-      ],
-      "budgetCode": "",
-      "hours": "16"
-    },
-    {
       "id": "MOFA_02",
       "name": "다자외교역량과정",
       "en": "Multilateral Diplomacy",
@@ -14501,135 +13132,135 @@
       "hours": "20"
     },
     {
-      "id": "KEDI_02",
-      "name": "교원역량개발과정",
-      "en": "Teacher Competency Development",
+      "id": "SME_02",
+      "name": "벤처기업역량강화",
+      "en": "Venture Business Capacity Building",
       "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_07",
-      "org": "한국교육개발원",
-      "orgAbbr": "KEDI",
-      "alignedStrategy": "인공지능주권",
-      "competency": "인재육성",
-      "competencyEn": "Talent Development",
-      "competencyCategory": "리더십 역량",
-      "targetCompetencyId": "COMP_65",
-      "fieldCatCode": "COMPCAT_Leadership",
-      "relatedCompetencyIds": [
-        "COMP_65",
-        "COMP_31",
-        "COMP_55"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "KOTECH_02",
-      "name": "스마트기술교육",
-      "en": "Smart Technology Education",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_11",
-      "org": "한국기술교육대학교",
-      "orgAbbr": "KOTECH",
+      "orgId": "ORG_MINISTRY_10",
+      "org": "중소벤처기업부",
+      "orgAbbr": "MSS",
       "alignedStrategy": "전략기술주권",
-      "competency": "코딩",
-      "competencyEn": "Programming",
+      "competency": "경영전략",
+      "competencyEn": "Business Strategy",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_40",
-      "fieldCatCode": "COMPCAT_Technical",
+      "targetCompetencyId": "COMP_69",
+      "fieldCatCode": "COMPCAT_Strategic",
       "relatedCompetencyIds": [
-        "COMP_40",
-        "COMP_Semiconductor",
-        "COMP_Shipbuilding"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "MAFRA_03",
-      "name": "농업혁신정책교육",
-      "en": "Agricultural Innovation Policy",
-      "type": "OnlineModule",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_14",
-      "org": "농림축산식품부",
-      "orgAbbr": "MAFRA",
-      "alignedStrategy": "지역균형발전",
-      "competency": "혁신마인드",
-      "competencyEn": "Innovation Mindset",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_50",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_50",
-        "COMP_35",
-        "COMP_26"
-      ],
-      "budgetCode": "",
-      "hours": "12"
-    },
-    {
-      "id": "KISA_02",
-      "name": "사이버보안실무",
-      "en": "Cyber Security Practice",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_12",
-      "org": "한국인터넷진흥원",
-      "orgAbbr": "KISA",
-      "alignedStrategy": "인공지능주권",
-      "competency": "클라우드 보안",
-      "competencyEn": "Cloud Security",
-      "competencyCategory": "기술보안 역량",
-      "targetCompetencyId": "COMP_CloudSec",
-      "fieldCatCode": "COMPCAT_Tech_Security",
-      "relatedCompetencyIds": [
-        "COMP_CloudSec",
-        "COMP_AI_01",
-        "COMP_SW_01"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "LB_FAM_01",
-      "name": "저출생대응가족정책교육",
-      "en": "Low Birthrate Response Family Policy Training",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_07",
-      "org": "보건복지부",
-      "orgAbbr": "MoHW",
-      "alignedStrategy": "저출생극복",
-      "competency": "공동체의식",
-      "competencyEn": "Community Awareness",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_52",
-      "fieldCatCode": "COMPCAT_Values",
-      "relatedCompetencyIds": [
-        "COMP_52",
-        "COMP_53",
-        "COMP_51",
-        "COMP_87"
+        "COMP_69",
+        "COMP_26",
+        "COMP_31"
       ],
       "budgetCode": "",
       "hours": "16"
     },
     {
-      "id": "WT_WLF_03",
-      "name": "노인일자리지원교육",
-      "en": "Elderly Job Support Training",
+      "id": "KIPA_03",
+      "name": "공공리더십교육",
+      "en": "Public Sector Leadership",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_14",
+      "org": "한국행정연구원",
+      "orgAbbr": "KIPA",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "리더십",
+      "competencyEn": "Leadership",
+      "competencyCategory": "리더십 역량",
+      "targetCompetencyId": "COMP_61",
+      "fieldCatCode": "COMPCAT_Leadership",
+      "relatedCompetencyIds": [
+        "COMP_61",
+        "COMP_62",
+        "COMP_22"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "MOLIT_03",
+      "name": "건설안전관리",
+      "en": "Construction Safety Management",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_13",
+      "org": "국토교통부",
+      "orgAbbr": "MOLIT",
+      "alignedStrategy": "전략기술주권",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_44",
+        "COMP_27"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "ENV_01",
+      "name": "탄소중립정책실무",
+      "en": "Carbon Neutral Policy Practice",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_12",
+      "org": "환경부",
+      "orgAbbr": "MOE_Env",
+      "alignedStrategy": "탄소중립·재생에너지",
+      "competency": "녹색기술·탄소중립",
+      "competencyEn": "Green Technology & Carbon Neutrality",
+      "competencyCategory": "녹색기술·탄소중립 역량",
+      "targetCompetencyId": "COMP_Green",
+      "fieldCatCode": "COMPCAT_Green_Tech",
+      "relatedCompetencyIds": [
+        "COMP_Green",
+        "COMP_52",
+        "COMP_54"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "FE_FTC_01",
+      "name": "공정거래기본종합과정",
+      "en": "Fair Trade Fundamentals Course",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_05",
+      "org": "기획재정부",
+      "orgAbbr": "MOF",
+      "alignedStrategy": "공정경제민주화",
+      "competency": "윤리경영",
+      "competencyEn": "Ethical Business Practice",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_54",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_54",
+        "COMP_89",
+        "COMP_90",
+        "COMP_43"
+      ],
+      "budgetCode": "",
+      "hours": "48"
+    },
+    {
+      "id": "WT_WLF_01",
+      "name": "청년사회서비스사업",
+      "en": "Youth Social Service Program",
       "type": "WorkshopSeminar",
       "targetGroupId": "",
       "targetGroup": "",
@@ -14638,19 +13269,146 @@
       "org": "보건복지부",
       "orgAbbr": "MoHW",
       "alignedStrategy": "포용적복지국가",
-      "competency": "자기개발",
-      "competencyEn": "Self Development",
+      "competency": "공동체의식",
+      "competencyEn": "Community Awareness",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_31",
-      "fieldCatCode": "COMPCAT_Learning",
+      "targetCompetencyId": "COMP_52",
+      "fieldCatCode": "COMPCAT_Values",
       "relatedCompetencyIds": [
-        "COMP_31",
-        "COMP_30",
-        "COMP_87",
-        "COMP_52"
+        "COMP_52",
+        "COMP_51",
+        "COMP_22",
+        "COMP_79"
+      ],
+      "budgetCode": "",
+      "hours": "40"
+    },
+    {
+      "id": "KEA_02",
+      "name": "에너지효율관리실무",
+      "en": "Energy Efficiency Management",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_16",
+      "org": "한국에너지공단",
+      "orgAbbr": "KEA",
+      "alignedStrategy": "에너지고속도로",
+      "competency": "녹색기술·탄소중립",
+      "competencyEn": "Green Technology & Carbon Neutrality",
+      "competencyCategory": "녹색기술·탄소중립 역량",
+      "targetCompetencyId": "COMP_Green",
+      "fieldCatCode": "COMPCAT_Green_Tech",
+      "relatedCompetencyIds": [
+        "COMP_Green",
+        "COMP_27",
+        "COMP_35"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "KOFAC_03",
+      "name": "AI교육콘텐츠개발",
+      "en": "AI Education Content Development",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_06",
+      "org": "한국과학창의재단",
+      "orgAbbr": "KOFAC",
+      "alignedStrategy": "인공지능주권",
+      "competency": "프롬프트 엔지니어링",
+      "competencyEn": "Prompt Engineering",
+      "competencyCategory": "AI·인프라 역량",
+      "targetCompetencyId": "COMP_AI_01",
+      "fieldCatCode": "COMPCAT_AI_and_Infrastructure",
+      "relatedCompetencyIds": [
+        "COMP_AI_01",
+        "COMP_40",
+        "COMP_26"
       ],
       "budgetCode": "",
       "hours": "24"
+    },
+    {
+      "id": "RD_LCM_01",
+      "name": "지역사회서비스투자사업",
+      "en": "Regional Community Service Investment",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_11",
+      "org": "행정안전부",
+      "orgAbbr": "MOIS",
+      "alignedStrategy": "지역균형발전",
+      "competency": "협력정신",
+      "competencyEn": "Collaboration Spirit",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_51",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_51",
+        "COMP_52",
+        "COMP_64",
+        "COMP_79"
+      ],
+      "budgetCode": "",
+      "hours": "28"
+    },
+    {
+      "id": "MOGEF_02",
+      "name": "가족지원역량강화",
+      "en": "Family Support Capacity Building",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_16",
+      "org": "여성가족부",
+      "orgAbbr": "MOGEF",
+      "alignedStrategy": "저출생극복",
+      "competency": "협력정신",
+      "competencyEn": "Collaboration Spirit",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_51",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_51",
+        "COMP_19",
+        "COMP_30"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "WT_WLF_04",
+      "name": "요양보호사양성과정",
+      "en": "Care Worker Training Program",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_07",
+      "org": "보건복지부",
+      "orgAbbr": "MoHW",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "감정지능",
+      "competencyEn": "Emotional Intelligence",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_24",
+      "fieldCatCode": "COMPCAT_Interpersonal",
+      "relatedCompetencyIds": [
+        "COMP_24",
+        "COMP_22",
+        "COMP_79",
+        "COMP_53"
+      ],
+      "budgetCode": "",
+      "hours": "320"
     },
     {
       "id": "KOSAF_02",
@@ -14678,17 +13436,42 @@
       "hours": "16"
     },
     {
-      "id": "KOTECH_01",
-      "name": "직업훈련교원연수",
-      "en": "Vocational Training Faculty Dev",
+      "id": "KIPA_02",
+      "name": "정책분석실무",
+      "en": "Policy Analysis Practice",
       "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_11",
-      "org": "한국기술교육대학교",
-      "orgAbbr": "KOTECH",
-      "alignedStrategy": "전략기술주권",
+      "orgId": "ORG_INSTITUTE_14",
+      "org": "한국행정연구원",
+      "orgAbbr": "KIPA",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "분석력",
+      "competencyEn": "Analytical Thinking",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_27",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_27",
+        "COMP_28",
+        "COMP_32"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "KEDI_02",
+      "name": "교원역량개발과정",
+      "en": "Teacher Competency Development",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_07",
+      "org": "한국교육개발원",
+      "orgAbbr": "KEDI",
+      "alignedStrategy": "인공지능주권",
       "competency": "인재육성",
       "competencyEn": "Talent Development",
       "competencyCategory": "리더십 역량",
@@ -14696,23 +13479,173 @@
       "fieldCatCode": "COMPCAT_Leadership",
       "relatedCompetencyIds": [
         "COMP_65",
-        "COMP_55",
-        "COMP_34"
+        "COMP_31",
+        "COMP_55"
       ],
       "budgetCode": "",
-      "hours": "40"
+      "hours": "24"
     },
     {
-      "id": "KISA_01",
-      "name": "정보보호전문교육",
-      "en": "Information Security Education",
+      "id": "MOJ_02",
+      "name": "교정정책실무",
+      "en": "Correctional Policy Practice",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_18",
+      "org": "법무부",
+      "orgAbbr": "MOJ",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_52",
+        "COMP_43"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "MOLIT_01",
+      "name": "스마트시티기획",
+      "en": "Smart City Planning",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_13",
+      "org": "국토교통부",
+      "orgAbbr": "MOLIT",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "코딩",
+      "competencyEn": "Programming",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_40",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_40",
+        "COMP_38",
+        "COMP_35"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "MOF_SEA_03",
+      "name": "해운물류디지털화",
+      "en": "Shipping Logistics Digitalization",
       "type": "K_DigitalTraining",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_12",
-      "org": "한국인터넷진흥원",
-      "orgAbbr": "KISA",
+      "orgId": "ORG_MINISTRY_15",
+      "org": "해양수산부",
+      "orgAbbr": "MOF_Sea",
+      "alignedStrategy": "인공지능주권",
+      "competency": "IT활용",
+      "competencyEn": "IT Proficiency",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_38",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_38",
+        "COMP_35",
+        "COMP_27"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "ENV_02",
+      "name": "환경영향평가실무",
+      "en": "Environmental Impact Assessment",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_12",
+      "org": "환경부",
+      "orgAbbr": "MOE_Env",
+      "alignedStrategy": "탄소중립·재생에너지",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_27",
+        "COMP_50"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "HRD_03",
+      "name": "국가기술자격교육",
+      "en": "National Technical Qualification",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_01",
+      "org": "한국산업인력공단",
+      "orgAbbr": "HRD-Korea",
+      "alignedStrategy": "전략기술주권",
+      "competency": "반도체 설계·공정",
+      "competencyEn": "Semiconductor Design & Process",
+      "competencyCategory": "반도체 설계 역량",
+      "targetCompetencyId": "COMP_Semiconductor",
+      "fieldCatCode": "COMPCAT_Semiconductor_Design",
+      "relatedCompetencyIds": [
+        "COMP_Semiconductor",
+        "COMP_Shipbuilding",
+        "COMP_Mobility"
+      ],
+      "budgetCode": "",
+      "hours": "30"
+    },
+    {
+      "id": "KOSAF_03",
+      "name": "취업사회진출역량",
+      "en": "Career Readiness Programme",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_13",
+      "org": "한국장학재단",
+      "orgAbbr": "KOSAF",
+      "alignedStrategy": "전국민기본소득",
+      "competency": "학습능력",
+      "competencyEn": "Learning Ability",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_30",
+      "fieldCatCode": "COMPCAT_Learning",
+      "relatedCompetencyIds": [
+        "COMP_30",
+        "COMP_45",
+        "COMP_55"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "NIPA_02",
+      "name": "클라우드실무교육",
+      "en": "Cloud Computing Practice",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_05",
+      "org": "정보통신산업진흥원",
+      "orgAbbr": "NIPA",
       "alignedStrategy": "인공지능주권",
       "competency": "클라우드 보안",
       "competencyEn": "Cloud Security",
@@ -14721,11 +13654,239 @@
       "fieldCatCode": "COMPCAT_Tech_Security",
       "relatedCompetencyIds": [
         "COMP_CloudSec",
-        "COMP_40",
-        "COMP_38"
+        "COMP_38",
+        "COMP_40"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "LB_CHD_02",
+      "name": "보육시설운영관리과정",
+      "en": "Childcare Facility Management Program",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_02",
+      "org": "교육부",
+      "orgAbbr": "MOE",
+      "alignedStrategy": "저출생극복",
+      "competency": "성과관리",
+      "competencyEn": "Performance Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_60",
+      "fieldCatCode": "COMPCAT_Capability",
+      "relatedCompetencyIds": [
+        "COMP_60",
+        "COMP_35",
+        "COMP_64",
+        "COMP_31"
       ],
       "budgetCode": "",
       "hours": "40"
+    },
+    {
+      "id": "RD_LYJ_01",
+      "name": "지역주도형청년일자리사업",
+      "en": "Local-led Youth Job Program",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_11",
+      "org": "행정안전부",
+      "orgAbbr": "MOIS",
+      "alignedStrategy": "지역균형발전",
+      "competency": "프로젝트관리",
+      "competencyEn": "Project Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_35",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_35",
+        "COMP_60",
+        "COMP_64",
+        "COMP_22"
+      ],
+      "budgetCode": "",
+      "hours": "36"
+    },
+    {
+      "id": "SME_03",
+      "name": "소상공인경영개선",
+      "en": "Small Business Management",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_10",
+      "org": "중소벤처기업부",
+      "orgAbbr": "MSS",
+      "alignedStrategy": "공정경제민주화",
+      "competency": "성과관리",
+      "competencyEn": "Performance Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_60",
+      "fieldCatCode": "COMPCAT_Capability",
+      "relatedCompetencyIds": [
+        "COMP_60",
+        "COMP_27",
+        "COMP_22"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "NHRDI_03",
+      "name": "디지털행정교육",
+      "en": "Digital Government Education",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_09",
+      "org": "국가공무원인재개발원",
+      "orgAbbr": "NHRDI",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "IT활용",
+      "competencyEn": "IT Proficiency",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_38",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_38",
+        "COMP_CloudSec",
+        "COMP_DataAnalysis"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "FSC_03",
+      "name": "자본시장교육",
+      "en": "Capital Market Education",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_19",
+      "org": "금융위원회",
+      "orgAbbr": "FSC",
+      "alignedStrategy": "공정경제민주화",
+      "competency": "재무관리",
+      "competencyEn": "Financial Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_36",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_36",
+        "COMP_69",
+        "COMP_DataAnalysis"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "NIPA_01",
+      "name": "SW인력양성과정",
+      "en": "SW Workforce Development",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_05",
+      "org": "정보통신산업진흥원",
+      "orgAbbr": "NIPA",
+      "alignedStrategy": "인공지능주권",
+      "competency": "코딩",
+      "competencyEn": "Programming",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_40",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_40",
+        "COMP_SW_01",
+        "COMP_AI_01"
+      ],
+      "budgetCode": "",
+      "hours": "40"
+    },
+    {
+      "id": "NILE_02",
+      "name": "평생학습도시운영",
+      "en": "Lifelong Learning City Operations",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_03",
+      "org": "국가평생교육진흥원",
+      "orgAbbr": "NILE",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "공동체의식",
+      "competencyEn": "Community Awareness",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_52",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_52",
+        "COMP_30",
+        "COMP_51"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "MOJ_01",
+      "name": "법무행정교육",
+      "en": "Legal Administration Education",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_18",
+      "org": "법무부",
+      "orgAbbr": "MOJ",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_35",
+        "COMP_44"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "WT_WLF_02",
+      "name": "사회서비스투자사업",
+      "en": "Community Services Investment Program",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_07",
+      "org": "보건복지부",
+      "orgAbbr": "MoHW",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "협력정신",
+      "competencyEn": "Collaboration Spirit",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_51",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_51",
+        "COMP_52",
+        "COMP_53",
+        "COMP_24"
+      ],
+      "budgetCode": "",
+      "hours": "32"
     },
     {
       "id": "KOFAC_01",
@@ -14753,56 +13914,204 @@
       "hours": "20"
     },
     {
-      "id": "FE_ETH_01",
-      "name": "공정경제윤리교육",
-      "en": "Fair Economy Ethics Training",
+      "id": "NHRDI_01",
+      "name": "고위공무원과정",
+      "en": "Senior Civil Servant Programme",
       "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_05",
-      "org": "기획재정부",
-      "orgAbbr": "MOF",
-      "alignedStrategy": "공정경제민주화",
-      "competency": "효율성추구",
-      "competencyEn": "Efficiency Pursuit",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_90",
-      "fieldCatCode": "COMPCAT_Values",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_09",
+      "org": "국가공무원인재개발원",
+      "orgAbbr": "NHRDI",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "비전수립",
+      "competencyEn": "Vision Setting",
+      "competencyCategory": "리더십 역량",
+      "targetCompetencyId": "COMP_62",
+      "fieldCatCode": "COMPCAT_Leadership",
       "relatedCompetencyIds": [
-        "COMP_90",
-        "COMP_54",
-        "COMP_89",
-        "COMP_69"
+        "COMP_62",
+        "COMP_61",
+        "COMP_17"
+      ],
+      "budgetCode": "",
+      "hours": "40"
+    },
+    {
+      "id": "FSC_01",
+      "name": "금융규제실무",
+      "en": "Financial Regulation Practice",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_19",
+      "org": "금융위원회",
+      "orgAbbr": "FSC",
+      "alignedStrategy": "공정경제민주화",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_35",
+        "COMP_27"
       ],
       "budgetCode": "",
       "hours": "24"
     },
     {
-      "id": "WT_WLF_04",
-      "name": "요양보호사양성과정",
-      "en": "Care Worker Training Program",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "",
-      "targetGroup": "",
-      "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_07",
-      "org": "보건복지부",
-      "orgAbbr": "MoHW",
-      "alignedStrategy": "포용적복지국가",
-      "competency": "감정지능",
-      "competencyEn": "Emotional Intelligence",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_24",
-      "fieldCatCode": "COMPCAT_Interpersonal",
+      "id": "KISA_01",
+      "name": "정보보호전문교육",
+      "en": "Information Security Education",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_12",
+      "org": "한국인터넷진흥원",
+      "orgAbbr": "KISA",
+      "alignedStrategy": "인공지능주권",
+      "competency": "클라우드 보안",
+      "competencyEn": "Cloud Security",
+      "competencyCategory": "기술보안 역량",
+      "targetCompetencyId": "COMP_CloudSec",
+      "fieldCatCode": "COMPCAT_Tech_Security",
       "relatedCompetencyIds": [
-        "COMP_24",
-        "COMP_22",
-        "COMP_79",
-        "COMP_53"
+        "COMP_CloudSec",
+        "COMP_40",
+        "COMP_38"
       ],
       "budgetCode": "",
-      "hours": "320"
+      "hours": "40"
+    },
+    {
+      "id": "KISA_02",
+      "name": "사이버보안실무",
+      "en": "Cyber Security Practice",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_12",
+      "org": "한국인터넷진흥원",
+      "orgAbbr": "KISA",
+      "alignedStrategy": "인공지능주권",
+      "competency": "클라우드 보안",
+      "competencyEn": "Cloud Security",
+      "competencyCategory": "기술보안 역량",
+      "targetCompetencyId": "COMP_CloudSec",
+      "fieldCatCode": "COMPCAT_Tech_Security",
+      "relatedCompetencyIds": [
+        "COMP_CloudSec",
+        "COMP_AI_01",
+        "COMP_SW_01"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "MAFRA_02",
+      "name": "식품안전관리실무",
+      "en": "Food Safety Management",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_14",
+      "org": "농림축산식품부",
+      "orgAbbr": "MAFRA",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_52",
+        "COMP_27"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "HRD_01",
+      "name": "NCS기반훈련설계",
+      "en": "NCS-based Training Design",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_01",
+      "org": "한국산업인력공단",
+      "orgAbbr": "HRD-Korea",
+      "alignedStrategy": "전략기술주권",
+      "competency": "프로젝트관리",
+      "competencyEn": "Project Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_35",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_35",
+        "COMP_Semiconductor",
+        "COMP_27"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "KPC_01",
+      "name": "경영혁신실무",
+      "en": "Business Innovation Practice",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_10",
+      "org": "한국생산성본부",
+      "orgAbbr": "KPC",
+      "alignedStrategy": "전략기술주권",
+      "competency": "경영전략",
+      "competencyEn": "Business Strategy",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_69",
+      "fieldCatCode": "COMPCAT_Strategic",
+      "relatedCompetencyIds": [
+        "COMP_69",
+        "COMP_50",
+        "COMP_25"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "KOTECH_02",
+      "name": "스마트기술교육",
+      "en": "Smart Technology Education",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_11",
+      "org": "한국기술교육대학교",
+      "orgAbbr": "KOTECH",
+      "alignedStrategy": "전략기술주권",
+      "competency": "코딩",
+      "competencyEn": "Programming",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_40",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_40",
+        "COMP_Semiconductor",
+        "COMP_Shipbuilding"
+      ],
+      "budgetCode": "",
+      "hours": "24"
     },
     {
       "id": "LB_CHD_01",
@@ -14856,59 +14165,135 @@
       "hours": "8"
     },
     {
-      "id": "MOLIT_01",
-      "name": "스마트시티기획",
-      "en": "Smart City Planning",
+      "id": "KEIS_01",
+      "name": "취업역량강화과정",
+      "en": "Employment Competency Enhancement",
       "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_13",
-      "org": "국토교통부",
-      "orgAbbr": "MOLIT",
-      "alignedStrategy": "디지털플랫폼정부",
-      "competency": "코딩",
-      "competencyEn": "Programming",
+      "orgId": "ORG_INSTITUTE_04",
+      "org": "한국고용정보원",
+      "orgAbbr": "KEIS",
+      "alignedStrategy": "전국민기본소득",
+      "competency": "자기개발",
+      "competencyEn": "Self Development",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_40",
-      "fieldCatCode": "COMPCAT_Technical",
+      "targetCompetencyId": "COMP_31",
+      "fieldCatCode": "COMPCAT_Learning",
       "relatedCompetencyIds": [
-        "COMP_40",
+        "COMP_31",
+        "COMP_45",
+        "COMP_22"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "KPC_02",
+      "name": "스마트팩토리실무",
+      "en": "Smart Factory Practice",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_10",
+      "org": "한국생산성본부",
+      "orgAbbr": "KPC",
+      "alignedStrategy": "전략기술주권",
+      "competency": "반도체 설계·공정",
+      "competencyEn": "Semiconductor Design & Process",
+      "competencyCategory": "반도체 설계 역량",
+      "targetCompetencyId": "COMP_Semiconductor",
+      "fieldCatCode": "COMPCAT_Semiconductor_Design",
+      "relatedCompetencyIds": [
+        "COMP_Semiconductor",
         "COMP_38",
-        "COMP_35"
+        "COMP_40"
       ],
       "budgetCode": "",
       "hours": "24"
     },
     {
-      "id": "KOSAF_03",
-      "name": "취업사회진출역량",
-      "en": "Career Readiness Programme",
+      "id": "KWDI_01",
+      "name": "여성경력개발과정",
+      "en": "Women Career Development",
       "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_13",
-      "org": "한국장학재단",
-      "orgAbbr": "KOSAF",
-      "alignedStrategy": "전국민기본소득",
-      "competency": "학습능력",
-      "competencyEn": "Learning Ability",
+      "orgId": "ORG_INSTITUTE_15",
+      "org": "한국여성정책연구원",
+      "orgAbbr": "KWDI",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "자기개발",
+      "competencyEn": "Self Development",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_30",
+      "targetCompetencyId": "COMP_31",
       "fieldCatCode": "COMPCAT_Learning",
       "relatedCompetencyIds": [
-        "COMP_30",
+        "COMP_31",
         "COMP_45",
-        "COMP_55"
+        "COMP_22"
       ],
       "budgetCode": "",
       "hours": "20"
     },
     {
-      "id": "MOGEF_02",
-      "name": "가족지원역량강화",
-      "en": "Family Support Capacity Building",
+      "id": "KEDI_01",
+      "name": "교육정책연구실무",
+      "en": "Education Policy Research",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_07",
+      "org": "한국교육개발원",
+      "orgAbbr": "KEDI",
+      "alignedStrategy": "인공지능주권",
+      "competency": "분석력",
+      "competencyEn": "Analytical Thinking",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_27",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_27",
+        "COMP_28",
+        "COMP_35"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "LB_FAM_01",
+      "name": "저출생대응가족정책교육",
+      "en": "Low Birthrate Response Family Policy Training",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_07",
+      "org": "보건복지부",
+      "orgAbbr": "MoHW",
+      "alignedStrategy": "저출생극복",
+      "competency": "공동체의식",
+      "competencyEn": "Community Awareness",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_52",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_52",
+        "COMP_53",
+        "COMP_51",
+        "COMP_87"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "MOGEF_03",
+      "name": "청소년역량개발과정",
+      "en": "Youth Competency Development",
       "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
@@ -14917,56 +14302,31 @@
       "org": "여성가족부",
       "orgAbbr": "MOGEF",
       "alignedStrategy": "저출생극복",
-      "competency": "협력정신",
-      "competencyEn": "Collaboration Spirit",
+      "competency": "자기개발",
+      "competencyEn": "Self Development",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_51",
-      "fieldCatCode": "COMPCAT_Values",
+      "targetCompetencyId": "COMP_31",
+      "fieldCatCode": "COMPCAT_Learning",
       "relatedCompetencyIds": [
-        "COMP_51",
-        "COMP_19",
-        "COMP_30"
+        "COMP_31",
+        "COMP_45",
+        "COMP_21"
       ],
       "budgetCode": "",
-      "hours": "16"
+      "hours": "20"
     },
     {
-      "id": "NIPA_01",
-      "name": "SW인력양성과정",
-      "en": "SW Workforce Development",
+      "id": "MAFRA_01",
+      "name": "스마트팜기술교육",
+      "en": "Smart Farm Technology",
       "type": "K_DigitalTraining",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_05",
-      "org": "정보통신산업진흥원",
-      "orgAbbr": "NIPA",
-      "alignedStrategy": "인공지능주권",
-      "competency": "코딩",
-      "competencyEn": "Programming",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_40",
-      "fieldCatCode": "COMPCAT_Technical",
-      "relatedCompetencyIds": [
-        "COMP_40",
-        "COMP_SW_01",
-        "COMP_AI_01"
-      ],
-      "budgetCode": "",
-      "hours": "40"
-    },
-    {
-      "id": "KEIS_03",
-      "name": "고용정보시스템실무",
-      "en": "Employment Information Systems",
-      "type": "K_DigitalTraining",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_04",
-      "org": "한국고용정보원",
-      "orgAbbr": "KEIS",
-      "alignedStrategy": "디지털플랫폼정부",
+      "orgId": "ORG_MINISTRY_14",
+      "org": "농림축산식품부",
+      "orgAbbr": "MAFRA",
+      "alignedStrategy": "전략기술주권",
       "competency": "IT활용",
       "competencyEn": "IT Proficiency",
       "competencyCategory": "",
@@ -14974,8 +14334,108 @@
       "fieldCatCode": "COMPCAT_Technical",
       "relatedCompetencyIds": [
         "COMP_38",
-        "COMP_DataAnalysis",
-        "COMP_39"
+        "COMP_40",
+        "COMP_34"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "KEIS_02",
+      "name": "직업진로탐색교육",
+      "en": "Career Exploration Education",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_04",
+      "org": "한국고용정보원",
+      "orgAbbr": "KEIS",
+      "alignedStrategy": "전국민기본소득",
+      "competency": "학습능력",
+      "competencyEn": "Learning Ability",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_30",
+      "fieldCatCode": "COMPCAT_Learning",
+      "relatedCompetencyIds": [
+        "COMP_30",
+        "COMP_25",
+        "COMP_47"
+      ],
+      "budgetCode": "",
+      "hours": "12"
+    },
+    {
+      "id": "KEA_01",
+      "name": "신재생에너지기술교육",
+      "en": "Renewable Energy Technology",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_16",
+      "org": "한국에너지공단",
+      "orgAbbr": "KEA",
+      "alignedStrategy": "탄소중립·재생에너지",
+      "competency": "녹색기술·탄소중립",
+      "competencyEn": "Green Technology & Carbon Neutrality",
+      "competencyCategory": "녹색기술·탄소중립 역량",
+      "targetCompetencyId": "COMP_Green",
+      "fieldCatCode": "COMPCAT_Green_Tech",
+      "relatedCompetencyIds": [
+        "COMP_Green",
+        "COMP_34",
+        "COMP_38"
+      ],
+      "budgetCode": "",
+      "hours": "30"
+    },
+    {
+      "id": "MOFA_01",
+      "name": "국제협상실무",
+      "en": "International Negotiation Practice",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_17",
+      "org": "외교부",
+      "orgAbbr": "MOFA",
+      "alignedStrategy": "전략기술주권",
+      "competency": "협상",
+      "competencyEn": "Negotiation",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_18",
+      "fieldCatCode": "COMPCAT_Interpersonal",
+      "relatedCompetencyIds": [
+        "COMP_18",
+        "COMP_22",
+        "COMP_72"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "NILE_01",
+      "name": "K_MOOC학습설계",
+      "en": "K-MOOC Learning Design",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_03",
+      "org": "국가평생교육진흥원",
+      "orgAbbr": "NILE",
+      "alignedStrategy": "인공지능주권",
+      "competency": "글쓰기",
+      "competencyEn": "Writing",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_55",
+      "fieldCatCode": "COMPCAT_Communication",
+      "relatedCompetencyIds": [
+        "COMP_55",
+        "COMP_57",
+        "COMP_30"
       ],
       "budgetCode": "",
       "hours": "20"
@@ -15007,129 +14467,180 @@
       "hours": "40"
     },
     {
-      "id": "FSC_01",
-      "name": "금융규제실무",
-      "en": "Financial Regulation Practice",
+      "id": "KWDI_02",
+      "name": "성평등정책연구",
+      "en": "Gender Equality Policy Research",
       "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_19",
-      "org": "금융위원회",
-      "orgAbbr": "FSC",
-      "alignedStrategy": "공정경제민주화",
-      "competency": "행정법무",
-      "competencyEn": "Administrative Law",
-      "competencyCategory": "행정법무 역량",
-      "targetCompetencyId": "COMP_AdminLaw",
-      "fieldCatCode": "COMPCAT_AdminLaw",
+      "orgId": "ORG_INSTITUTE_15",
+      "org": "한국여성정책연구원",
+      "orgAbbr": "KWDI",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "공동체의식",
+      "competencyEn": "Community Awareness",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_52",
+      "fieldCatCode": "COMPCAT_Values",
       "relatedCompetencyIds": [
-        "COMP_AdminLaw",
+        "COMP_52",
+        "COMP_27",
+        "COMP_50"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "SME_01",
+      "name": "창업생태계조성실무",
+      "en": "Startup Ecosystem Management",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_10",
+      "org": "중소벤처기업부",
+      "orgAbbr": "MSS",
+      "alignedStrategy": "인공지능주권",
+      "competency": "프로젝트관리",
+      "competencyEn": "Project Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_35",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
         "COMP_35",
-        "COMP_27"
+        "COMP_25",
+        "COMP_40"
       ],
       "budgetCode": "",
       "hours": "24"
     },
     {
-      "id": "KOFAC_03",
-      "name": "AI교육콘텐츠개발",
-      "en": "AI Education Content Development",
+      "id": "HRD_02",
+      "name": "직업훈련교사연수",
+      "en": "Vocational Training Instructor",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_01",
+      "org": "한국산업인력공단",
+      "orgAbbr": "HRD-Korea",
+      "alignedStrategy": "전략기술주권",
+      "competency": "인재육성",
+      "competencyEn": "Talent Development",
+      "competencyCategory": "리더십 역량",
+      "targetCompetencyId": "COMP_65",
+      "fieldCatCode": "COMPCAT_Leadership",
+      "relatedCompetencyIds": [
+        "COMP_65",
+        "COMP_31",
+        "COMP_34"
+      ],
+      "budgetCode": "",
+      "hours": "40"
+    },
+    {
+      "id": "NIPA_03",
+      "name": "ICT융합기술교육",
+      "en": "ICT Convergence Technology",
       "type": "K_DigitalTraining",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_06",
-      "org": "한국과학창의재단",
-      "orgAbbr": "KOFAC",
-      "alignedStrategy": "인공지능주권",
-      "competency": "프롬프트 엔지니어링",
-      "competencyEn": "Prompt Engineering",
-      "competencyCategory": "AI·인프라 역량",
-      "targetCompetencyId": "COMP_AI_01",
-      "fieldCatCode": "COMPCAT_AI_and_Infrastructure",
+      "orgId": "ORG_INSTITUTE_05",
+      "org": "정보통신산업진흥원",
+      "orgAbbr": "NIPA",
+      "alignedStrategy": "전략기술주권",
+      "competency": "코딩",
+      "competencyEn": "Programming",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_40",
+      "fieldCatCode": "COMPCAT_Technical",
       "relatedCompetencyIds": [
-        "COMP_AI_01",
         "COMP_40",
-        "COMP_26"
-      ],
-      "budgetCode": "",
-      "hours": "24"
-    },
-    {
-      "id": "KEA_02",
-      "name": "에너지효율관리실무",
-      "en": "Energy Efficiency Management",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_16",
-      "org": "한국에너지공단",
-      "orgAbbr": "KEA",
-      "alignedStrategy": "에너지고속도로",
-      "competency": "녹색기술·탄소중립",
-      "competencyEn": "Green Technology & Carbon Neutrality",
-      "competencyCategory": "녹색기술·탄소중립 역량",
-      "targetCompetencyId": "COMP_Green",
-      "fieldCatCode": "COMPCAT_Green_Tech",
-      "relatedCompetencyIds": [
-        "COMP_Green",
-        "COMP_27",
-        "COMP_35"
+        "COMP_38",
+        "COMP_25"
       ],
       "budgetCode": "",
       "hours": "20"
     },
     {
-      "id": "MOGEF_03",
-      "name": "청소년역량개발과정",
-      "en": "Youth Competency Development",
-      "type": "WorkshopSeminar",
+      "id": "KISA_03",
+      "name": "개인정보보호과정",
+      "en": "Personal Data Protection",
+      "type": "OnlineModule",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_16",
-      "org": "여성가족부",
-      "orgAbbr": "MOGEF",
-      "alignedStrategy": "저출생극복",
-      "competency": "자기개발",
-      "competencyEn": "Self Development",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_31",
-      "fieldCatCode": "COMPCAT_Learning",
-      "relatedCompetencyIds": [
-        "COMP_31",
-        "COMP_45",
-        "COMP_21"
-      ],
-      "budgetCode": "",
-      "hours": "20"
-    },
-    {
-      "id": "NHRDI_02",
-      "name": "신임관리자연수",
-      "en": "New Manager Training",
-      "type": "WorkshopSeminar",
-      "targetGroupId": "TGROUP_Expert",
-      "targetGroup": "전문가",
-      "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_INSTITUTE_09",
-      "org": "국가공무원인재개발원",
-      "orgAbbr": "NHRDI",
+      "orgId": "ORG_INSTITUTE_12",
+      "org": "한국인터넷진흥원",
+      "orgAbbr": "KISA",
       "alignedStrategy": "디지털플랫폼정부",
-      "competency": "성과관리",
-      "competencyEn": "Performance Management",
-      "competencyCategory": "",
-      "targetCompetencyId": "COMP_60",
-      "fieldCatCode": "COMPCAT_Capability",
+      "competency": "클라우드 보안",
+      "competencyEn": "Cloud Security",
+      "competencyCategory": "기술보안 역량",
+      "targetCompetencyId": "COMP_CloudSec",
+      "fieldCatCode": "COMPCAT_Tech_Security",
       "relatedCompetencyIds": [
-        "COMP_60",
-        "COMP_63",
-        "COMP_31"
+        "COMP_CloudSec",
+        "COMP_AdminLaw",
+        "COMP_52"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "FE_ETH_01",
+      "name": "공정경제윤리교육",
+      "en": "Fair Economy Ethics Training",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "",
+      "targetGroup": "",
+      "targetGroupEn": "",
+      "orgId": "ORG_MINISTRY_05",
+      "org": "기획재정부",
+      "orgAbbr": "MOF",
+      "alignedStrategy": "공정경제민주화",
+      "competency": "효율성추구",
+      "competencyEn": "Efficiency Pursuit",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_90",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_90",
+        "COMP_54",
+        "COMP_89",
+        "COMP_69"
       ],
       "budgetCode": "",
       "hours": "24"
+    },
+    {
+      "id": "KIPA_01",
+      "name": "행정혁신과정",
+      "en": "Administrative Innovation",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_14",
+      "org": "한국행정연구원",
+      "orgAbbr": "KIPA",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "혁신마인드",
+      "competencyEn": "Innovation Mindset",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_50",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_50",
+        "COMP_35",
+        "COMP_69"
+      ],
+      "budgetCode": "",
+      "hours": "20"
     },
     {
       "id": "MOF_SEA_01",
@@ -15157,29 +14668,29 @@
       "hours": "20"
     },
     {
-      "id": "MOFA_03",
-      "name": "외교문서작성실무",
-      "en": "Diplomatic Writing Practice",
-      "type": "OnlineModule",
+      "id": "KLI_02",
+      "name": "노사관계교육",
+      "en": "Labour-Management Relations",
+      "type": "WorkshopSeminar",
       "targetGroupId": "TGROUP_Expert",
       "targetGroup": "전문가",
       "targetGroupEn": "Expert / Professional",
-      "orgId": "ORG_MINISTRY_17",
-      "org": "외교부",
-      "orgAbbr": "MOFA",
-      "alignedStrategy": "전략기술주권",
-      "competency": "글쓰기",
-      "competencyEn": "Writing",
+      "orgId": "ORG_INSTITUTE_08",
+      "org": "한국노동연구원",
+      "orgAbbr": "KLI",
+      "alignedStrategy": "공정경제민주화",
+      "competency": "갈등해결",
+      "competencyEn": "Conflict Resolution",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_55",
-      "fieldCatCode": "COMPCAT_Communication",
+      "targetCompetencyId": "COMP_19",
+      "fieldCatCode": "COMPCAT_Interpersonal",
       "relatedCompetencyIds": [
-        "COMP_55",
-        "COMP_58",
-        "COMP_35"
+        "COMP_19",
+        "COMP_22",
+        "COMP_18"
       ],
       "budgetCode": "",
-      "hours": "16"
+      "hours": "20"
     },
     {
       "id": "KWDI_03",
@@ -15207,30 +14718,480 @@
       "hours": "12"
     },
     {
-      "id": "RD_LCM_01",
-      "name": "지역사회서비스투자사업",
-      "en": "Regional Community Service Investment",
+      "id": "MOFA_03",
+      "name": "외교문서작성실무",
+      "en": "Diplomatic Writing Practice",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_17",
+      "org": "외교부",
+      "orgAbbr": "MOFA",
+      "alignedStrategy": "전략기술주권",
+      "competency": "글쓰기",
+      "competencyEn": "Writing",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_55",
+      "fieldCatCode": "COMPCAT_Communication",
+      "relatedCompetencyIds": [
+        "COMP_55",
+        "COMP_58",
+        "COMP_35"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "FSC_02",
+      "name": "핀테크정책교육",
+      "en": "FinTech Policy Education",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_19",
+      "org": "금융위원회",
+      "orgAbbr": "FSC",
+      "alignedStrategy": "인공지능주권",
+      "competency": "코딩",
+      "competencyEn": "Programming",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_40",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_40",
+        "COMP_38",
+        "COMP_AI_01"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "KPC_03",
+      "name": "생산성향상과정",
+      "en": "Productivity Improvement",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_10",
+      "org": "한국생산성본부",
+      "orgAbbr": "KPC",
+      "alignedStrategy": "인공지능주권",
+      "competency": "프로젝트관리",
+      "competencyEn": "Project Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_35",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_35",
+        "COMP_27",
+        "COMP_45"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "MAFRA_03",
+      "name": "농업혁신정책교육",
+      "en": "Agricultural Innovation Policy",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_14",
+      "org": "농림축산식품부",
+      "orgAbbr": "MAFRA",
+      "alignedStrategy": "지역균형발전",
+      "competency": "혁신마인드",
+      "competencyEn": "Innovation Mindset",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_50",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_50",
+        "COMP_35",
+        "COMP_26"
+      ],
+      "budgetCode": "",
+      "hours": "12"
+    },
+    {
+      "id": "KEIS_03",
+      "name": "고용정보시스템실무",
+      "en": "Employment Information Systems",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_04",
+      "org": "한국고용정보원",
+      "orgAbbr": "KEIS",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "IT활용",
+      "competencyEn": "IT Proficiency",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_38",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_38",
+        "COMP_DataAnalysis",
+        "COMP_39"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "NILE_03",
+      "name": "디지털학습환경구축",
+      "en": "Digital Learning Environment",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_03",
+      "org": "국가평생교육진흥원",
+      "orgAbbr": "NILE",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "IT활용",
+      "competencyEn": "IT Proficiency",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_38",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_38",
+        "COMP_CloudSec",
+        "COMP_DataAnalysis"
+      ],
+      "budgetCode": "",
+      "hours": "24"
+    },
+    {
+      "id": "KLI_03",
+      "name": "고용정책연구방법",
+      "en": "Employment Policy Research Methods",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_08",
+      "org": "한국노동연구원",
+      "orgAbbr": "KLI",
+      "alignedStrategy": "전국민기본소득",
+      "competency": "문제해결",
+      "competencyEn": "Problem Solving",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_26",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_26",
+        "COMP_32",
+        "COMP_35"
+      ],
+      "budgetCode": "",
+      "hours": "12"
+    },
+    {
+      "id": "KRIVET_02",
+      "name": "자격제도정책연구",
+      "en": "Qualification Policy Research",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_02",
+      "org": "한국직업능력연구원",
+      "orgAbbr": "KRIVET",
+      "alignedStrategy": "인공지능주권",
+      "competency": "프로젝트관리",
+      "competencyEn": "Project Management",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_35",
+      "fieldCatCode": "COMPCAT_Technical",
+      "relatedCompetencyIds": [
+        "COMP_35",
+        "COMP_25",
+        "COMP_28"
+      ],
+      "budgetCode": "",
+      "hours": "12"
+    },
+    {
+      "id": "KLI_01",
+      "name": "노동시장분석방법",
+      "en": "Labour Market Analysis Methods",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_08",
+      "org": "한국노동연구원",
+      "orgAbbr": "KLI",
+      "alignedStrategy": "전국민기본소득",
+      "competency": "분석력",
+      "competencyEn": "Analytical Thinking",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_27",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_27",
+        "COMP_DataAnalysis",
+        "COMP_28"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "KOTECH_01",
+      "name": "직업훈련교원연수",
+      "en": "Vocational Training Faculty Dev",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_11",
+      "org": "한국기술교육대학교",
+      "orgAbbr": "KOTECH",
+      "alignedStrategy": "전략기술주권",
+      "competency": "인재육성",
+      "competencyEn": "Talent Development",
+      "competencyCategory": "리더십 역량",
+      "targetCompetencyId": "COMP_65",
+      "fieldCatCode": "COMPCAT_Leadership",
+      "relatedCompetencyIds": [
+        "COMP_65",
+        "COMP_55",
+        "COMP_34"
+      ],
+      "budgetCode": "",
+      "hours": "40"
+    },
+    {
+      "id": "MOGEF_01",
+      "name": "성평등정책교육",
+      "en": "Gender Equality Policy Education",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_16",
+      "org": "여성가족부",
+      "orgAbbr": "MOGEF",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "공동체의식",
+      "competencyEn": "Community Awareness",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_52",
+      "fieldCatCode": "COMPCAT_Values",
+      "relatedCompetencyIds": [
+        "COMP_52",
+        "COMP_22",
+        "COMP_51"
+      ],
+      "budgetCode": "",
+      "hours": "12"
+    },
+    {
+      "id": "KRIVET_03",
+      "name": "NCS개발방법론",
+      "en": "NCS Development Methodology",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_02",
+      "org": "한국직업능력연구원",
+      "orgAbbr": "KRIVET",
+      "alignedStrategy": "전략기술주권",
+      "competency": "분석력",
+      "competencyEn": "Analytical Thinking",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_27",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_27",
+        "COMP_55",
+        "COMP_30"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "KEDI_03",
+      "name": "교육통계분석교육",
+      "en": "Education Statistics Analysis",
+      "type": "K_DigitalTraining",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_07",
+      "org": "한국교육개발원",
+      "orgAbbr": "KEDI",
+      "alignedStrategy": "디지털플랫폼정부",
+      "competency": "데이터 분석",
+      "competencyEn": "Data Analysis",
+      "competencyCategory": "데이터 활용 역량",
+      "targetCompetencyId": "COMP_DataAnalysis",
+      "fieldCatCode": "COMPCAT_Data_Fluency",
+      "relatedCompetencyIds": [
+        "COMP_DataAnalysis",
+        "COMP_27",
+        "COMP_38"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "KEA_03",
+      "name": "탄소중립실천교육",
+      "en": "Carbon Neutral Practice",
+      "type": "OnlineModule",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_16",
+      "org": "한국에너지공단",
+      "orgAbbr": "KEA",
+      "alignedStrategy": "탄소중립·재생에너지",
+      "competency": "녹색기술·탄소중립",
+      "competencyEn": "Green Technology & Carbon Neutrality",
+      "competencyCategory": "녹색기술·탄소중립 역량",
+      "targetCompetencyId": "COMP_Green",
+      "fieldCatCode": "COMPCAT_Green_Tech",
+      "relatedCompetencyIds": [
+        "COMP_Green",
+        "COMP_52",
+        "COMP_54"
+      ],
+      "budgetCode": "",
+      "hours": "12"
+    },
+    {
+      "id": "KRIVET_01",
+      "name": "직업능력개발연구방법론",
+      "en": "Vocational HRD Research Methods",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_02",
+      "org": "한국직업능력연구원",
+      "orgAbbr": "KRIVET",
+      "alignedStrategy": "전략기술주권",
+      "competency": "문제해결",
+      "competencyEn": "Problem Solving",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_26",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_26",
+        "COMP_27",
+        "COMP_32"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "WT_WLF_03",
+      "name": "노인일자리지원교육",
+      "en": "Elderly Job Support Training",
       "type": "WorkshopSeminar",
       "targetGroupId": "",
       "targetGroup": "",
       "targetGroupEn": "",
-      "orgId": "ORG_MINISTRY_11",
-      "org": "행정안전부",
-      "orgAbbr": "MOIS",
-      "alignedStrategy": "지역균형발전",
-      "competency": "협력정신",
-      "competencyEn": "Collaboration Spirit",
+      "orgId": "ORG_MINISTRY_07",
+      "org": "보건복지부",
+      "orgAbbr": "MoHW",
+      "alignedStrategy": "포용적복지국가",
+      "competency": "자기개발",
+      "competencyEn": "Self Development",
       "competencyCategory": "",
-      "targetCompetencyId": "COMP_51",
-      "fieldCatCode": "COMPCAT_Values",
+      "targetCompetencyId": "COMP_31",
+      "fieldCatCode": "COMPCAT_Learning",
       "relatedCompetencyIds": [
-        "COMP_51",
-        "COMP_52",
-        "COMP_64",
-        "COMP_79"
+        "COMP_31",
+        "COMP_30",
+        "COMP_87",
+        "COMP_52"
       ],
       "budgetCode": "",
-      "hours": "28"
+      "hours": "24"
+    },
+    {
+      "id": "KOTECH_03",
+      "name": "현장실습교육방법론",
+      "en": "Field Practice Education Methods",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_11",
+      "org": "한국기술교육대학교",
+      "orgAbbr": "KOTECH",
+      "alignedStrategy": "전략기술주권",
+      "competency": "창의성",
+      "competencyEn": "Creativity",
+      "competencyCategory": "",
+      "targetCompetencyId": "COMP_25",
+      "fieldCatCode": "COMPCAT_Thinking",
+      "relatedCompetencyIds": [
+        "COMP_25",
+        "COMP_34",
+        "COMP_27"
+      ],
+      "budgetCode": "",
+      "hours": "20"
+    },
+    {
+      "id": "MOF_SEA_02",
+      "name": "수산자원관리실무",
+      "en": "Fisheries Resource Management",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_MINISTRY_15",
+      "org": "해양수산부",
+      "orgAbbr": "MOF_Sea",
+      "alignedStrategy": "탄소중립·재생에너지",
+      "competency": "행정법무",
+      "competencyEn": "Administrative Law",
+      "competencyCategory": "행정법무 역량",
+      "targetCompetencyId": "COMP_AdminLaw",
+      "fieldCatCode": "COMPCAT_AdminLaw",
+      "relatedCompetencyIds": [
+        "COMP_AdminLaw",
+        "COMP_52",
+        "COMP_35"
+      ],
+      "budgetCode": "",
+      "hours": "16"
+    },
+    {
+      "id": "KOSAF_01",
+      "name": "학생리더십개발과정",
+      "en": "Student Leadership Development",
+      "type": "WorkshopSeminar",
+      "targetGroupId": "TGROUP_Expert",
+      "targetGroup": "전문가",
+      "targetGroupEn": "Expert / Professional",
+      "orgId": "ORG_INSTITUTE_13",
+      "org": "한국장학재단",
+      "orgAbbr": "KOSAF",
+      "alignedStrategy": "저출생극복",
+      "competency": "리더십",
+      "competencyEn": "Leadership",
+      "competencyCategory": "리더십 역량",
+      "targetCompetencyId": "COMP_61",
+      "fieldCatCode": "COMPCAT_Leadership",
+      "relatedCompetencyIds": [
+        "COMP_61",
+        "COMP_62",
+        "COMP_22"
+      ],
+      "budgetCode": "",
+      "hours": "20"
     }
   ],
   "competencies": [
