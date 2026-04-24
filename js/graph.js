@@ -116,7 +116,7 @@ const VowlGraph = {
 
     const pathSel = linkSel.append('path')
       .attr('fill', 'none')
-      .attr('stroke-width', isSchema ? 2 : 1)
+      .attr('stroke-width', d => d.weight || (isSchema ? 2 : 1))
       .attr('stroke', d => {
         const sn = visNodes.find(n => n.id === d.source);
         return sn ? (isSchema ? this.COLORS[sn.group]+'cc' : this.COLORS[sn.group]+'66') : '#ffffff33';
@@ -254,19 +254,42 @@ const VowlGraph = {
     return { x: cx - ca*d, y: cy - sa*d };
   },
 
+  _propWeights() {
+    const d = HRDData;
+    const raw = {
+      hasPolicy:          d.policies.filter(p => p.relatedStrategyName).length,
+      hasProgram:         d.programs.length,
+      manages:            d.policies.filter(p => p.managingOrg).length,
+      isImplementedBy:    d.programs.filter(p => p.implOrg || p.organizationId).length,
+      supportsCompetency: d.programs.reduce((n,p) => n + (p.competencies ? p.competencies.length : 0), 0),
+      developsCompetency: d.programs.filter(p => p.competencies && p.competencies.length).length,
+      hasBudget:          (d.budgets || []).length,
+      managedBy:          (d.budgets || []).filter(b => b.relatedOrg || b.organizationId).length,
+    };
+    const vals = Object.values(raw);
+    const mn = Math.min(...vals) || 1;
+    const mx = Math.max(...vals) || 1;
+    const norm = {};
+    Object.entries(raw).forEach(([k,v]) => {
+      norm[k] = mx === mn ? 3 : 1.5 + ((v - mn) / (mx - mn)) * 3.5;
+    });
+    return norm;
+  },
+
   _buildSchema() {
+    const weights = this._propWeights();
     const nodes = Object.keys(this.COLORS).map(type => ({
       id: type, group: type, label: type, radius: 30,
     }));
     const links = [
-      { source:'NationalStrategy', target:'PublicPolicy',    label:'hasPolicy'         },
-      { source:'NationalStrategy', target:'Budget',           label:'hasBudget'          },
-      { source:'PublicPolicy',     target:'EducationProgram', label:'hasProgram'         },
-      { source:'Organization',     target:'PublicPolicy',     label:'manages'            },
-      { source:'EducationProgram', target:'Organization',     label:'isImplementedBy'    },
-      { source:'EducationProgram', target:'Competency',       label:'supportsCompetency' },
-      { source:'EducationProgram', target:'Competency',       label:'developsCompetency' },
-      { source:'Budget',           target:'Organization',     label:'managedBy'          },
+      { source:'NationalStrategy', target:'PublicPolicy',    label:'hasPolicy',         weight: weights.hasPolicy         },
+      { source:'NationalStrategy', target:'Budget',           label:'hasBudget',          weight: weights.hasBudget          },
+      { source:'PublicPolicy',     target:'EducationProgram', label:'hasProgram',         weight: weights.hasProgram         },
+      { source:'Organization',     target:'PublicPolicy',     label:'manages',            weight: weights.manages            },
+      { source:'EducationProgram', target:'Organization',     label:'isImplementedBy',    weight: weights.isImplementedBy    },
+      { source:'EducationProgram', target:'Competency',       label:'supportsCompetency', weight: weights.supportsCompetency },
+      { source:'EducationProgram', target:'Competency',       label:'developsCompetency', weight: weights.developsCompetency },
+      { source:'Budget',           target:'Organization',     label:'managedBy',          weight: weights.managedBy          },
     ];
     return { nodes, links };
   },
@@ -295,7 +318,8 @@ const VowlGraph = {
     }));
 
     const idSet = new Set(nodes.map(n => n.id));
-    const sl = (s,t,lbl) => { if(idSet.has(s)&&idSet.has(t)) links.push({source:s,target:t,label:lbl}); };
+    const wt = this._propWeights();
+    const sl = (s,t,lbl) => { if(idSet.has(s)&&idSet.has(t)) links.push({source:s,target:t,label:lbl,weight:wt[lbl]||1}); };
 
     // Strategy → Policy (real data)
     const stratByName = {};

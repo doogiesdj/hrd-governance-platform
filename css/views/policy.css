@@ -1,0 +1,134 @@
+/* Policy Chart Split Layout */
+.policy-chart-split {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.policy-chart-half {
+  width: 260px;
+  flex-shrink: 0;
+  height: 280px;
+  margin-bottom: 0 !important;
+}
+
+.policy-legend-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.policy-legend-panel::-webkit-scrollbar {
+  width: 4px;
+}
+.policy-legend-panel::-webkit-scrollbar-track { background: transparent; }
+.policy-legend-panel::-webkit-scrollbar-thumb { background: rgba(0,212,255,0.2); border-radius: 2px; }
+
+.policy-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.18s, border-color 0.18s;
+}
+
+.policy-legend-item:hover {
+  background: rgba(0, 212, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.2);
+}
+
+.policy-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.policy-legend-label {
+  flex: 1;
+  font-size: 12px;
+  color: #c0ccd8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.policy-legend-count {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a0aab8;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1px 7px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Policy Group Popup Rows */
+.policy-group-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.policy-group-row:hover {
+  background: rgba(0,212,255,0.08);
+}
+
+.policy-group-name {
+  flex: 1;
+  font-size: 13px;
+  color: #c8d8e8;
+}
+
+.policy-group-budget {
+  font-size: 11px;
+  color: #ffd700;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Policy Classification Toggle */
+.policy-class-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.policy-class-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-family: var(--font-primary);
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy-class-btn:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  color: #e0e8f0;
+}
+
+.policy-class-btn.active {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: #00d4ff;
+  color: #00d4ff;
+  font-weight: 600;
+}
+

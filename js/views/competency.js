@@ -64,6 +64,7 @@ Object.assign(App, {
       toggle.innerHTML = `
         <button class="comp-view-btn active" data-view="chart">도넛 차트</button>
         <button class="comp-view-btn" data-view="heatmap">기관×역량 히트맵</button>
+        <button class="comp-view-btn" data-view="workflow">갭 해결 현황</button>
       `;
       kpiGrid.insertAdjacentElement('afterend', toggle);
       toggle.querySelectorAll('.comp-view-btn').forEach(btn => {
@@ -385,12 +386,15 @@ Object.assign(App, {
 
   _applyCompViewMode(view) {
     if (!view) return;
-    const classBar  = view.querySelector('.comp-class-bar');
+    const classBar   = view.querySelector('.comp-class-bar');
     const chartSplit = view.querySelector('.comp-chart-split');
-    let hmWrap = view.querySelector('.comp-heatmap-wrap');
+    let hmWrap  = view.querySelector('.comp-heatmap-wrap');
+    let wfWrap  = view.querySelector('.comp-workflow-wrap');
+
     if (this._compViewMode === 'heatmap') {
       if (classBar)  classBar.style.display  = 'none';
       if (chartSplit) chartSplit.style.display = 'none';
+      if (wfWrap)  wfWrap.style.display  = 'none';
       if (!hmWrap) {
         hmWrap = document.createElement('div');
         hmWrap.className = 'comp-heatmap-wrap';
@@ -400,12 +404,184 @@ Object.assign(App, {
       }
       hmWrap.style.display = '';
       this._renderCompetencyHeatmap(hmWrap);
+    } else if (this._compViewMode === 'workflow') {
+      if (classBar)  classBar.style.display  = 'none';
+      if (chartSplit) chartSplit.style.display = 'none';
+      if (hmWrap)  hmWrap.style.display  = 'none';
+      if (!wfWrap) {
+        wfWrap = document.createElement('div');
+        wfWrap.className = 'comp-workflow-wrap';
+        const listContainer = view.querySelector('.list-container');
+        if (listContainer) listContainer.parentNode.insertBefore(wfWrap, listContainer);
+        else view.querySelector('.view-content').appendChild(wfWrap);
+      }
+      wfWrap.style.display = '';
+      this._renderGapWorkflow(wfWrap);
     } else {
       if (classBar)  classBar.style.display  = '';
       if (chartSplit) chartSplit.style.display = '';
-      if (hmWrap) hmWrap.style.display = 'none';
+      if (hmWrap)  hmWrap.style.display  = 'none';
+      if (wfWrap)  wfWrap.style.display  = 'none';
       this._updateCompetencyChart();
     }
+  },
+
+  _renderGapWorkflow(container) {
+    const d = HRDData;
+
+    const COMPCAT_LABEL = {
+      COMPCAT_Management:           '경영관리',
+      COMPCAT_Leadership:           '리더십',
+      COMPCAT_Digital_Literacy:     '디지털 리터러시',
+      COMPCAT_Collaboration:        '협업',
+      COMPCAT_AI_and_Infrastructure:'AI·인프라',
+      COMPCAT_Data_Fluency:         '데이터 활용',
+      COMPCAT_CS_Foundation:        'CS 기초',
+      COMPCAT_Basic_Academic:       '기초학업',
+      COMPCAT_Creativity:           '창의성',
+      COMPCAT_Software:             '소프트웨어',
+      COMPCAT_Social_Value:         '사회적 가치',
+      COMPCAT_Thinking:             '사고력',
+      COMPCAT_Adaptability:         '적응력',
+      COMPCAT_Reliability:          '신뢰성',
+      COMPCAT_Green_Tech:           '녹색기술',
+      COMPCAT_Strategic:            '전략기획',
+      COMPCAT_Capability:           '역량개발',
+      COMPCAT_Language_Math:        '언어·수리',
+      COMPCAT_Security:             '보안',
+      COMPCAT_Manufacturing:        '제조·생산',
+    };
+
+    const gapByCat  = {};
+    const progByCat = {};
+
+    d.competencyGaps.forEach(g => {
+      const cat = g.gapCompetencyId;
+      if (cat) gapByCat[cat] = (gapByCat[cat] || 0) + 1;
+    });
+    d.programs.forEach(p => {
+      const cat = p.fieldCatCode;
+      if (cat) progByCat[cat] = (progByCat[cat] || 0) + 1;
+    });
+
+    const allCats = [...new Set([...Object.keys(gapByCat), ...Object.keys(progByCat)])].sort();
+
+    const statusOf = cat => {
+      const pCount = progByCat[cat] || 0;
+      if (pCount === 0) return 'todo';
+      if (pCount <= 3)  return 'doing';
+      return 'done';
+    };
+
+    const COLS = [
+      { key: 'todo',  label: '미착수',  color: '#ff4757', desc: '프로그램 미연계' },
+      { key: 'doing', label: '진행 중', color: '#ffd700', desc: '프로그램 1-3개' },
+      { key: 'done',  label: '완료',    color: '#00ff41', desc: '프로그램 4개 이상' },
+    ];
+
+    const grouped = { todo: [], doing: [], done: [] };
+    allCats.forEach(cat => {
+      const st = statusOf(cat);
+      grouped[st].push({
+        cat,
+        label:  COMPCAT_LABEL[cat] || cat.replace('COMPCAT_', ''),
+        gaps:   gapByCat[cat]  || 0,
+        progs:  progByCat[cat] || 0,
+        status: st,
+      });
+    });
+    COLS.forEach(col => grouped[col.key].sort((a, b) => b.gaps - a.gaps));
+
+    const totalGaps  = Object.values(gapByCat).reduce((s, v) => s + v, 0);
+    const totalCats  = allCats.length;
+    const doneCats   = grouped.done.length;
+    const doingCats  = grouped.doing.length;
+    const covPct     = totalCats ? Math.round((doneCats + doingCats * 0.5) / totalCats * 100) : 0;
+
+    const cardHtml = item => {
+      const pBar = item.progs > 0 ? Math.min(100, item.progs / 10 * 100) : 0;
+      return `
+        <div class="wf-card" data-cat="${item.cat}" title="${item.cat}">
+          <div class="wf-card-name">${item.label}</div>
+          <div class="wf-card-meta">
+            <span class="wf-badge wf-badge-gap">${item.gaps}개 갭</span>
+            <span class="wf-badge wf-badge-prog">${item.progs}개 프로그램</span>
+          </div>
+          <div class="wf-card-bar">
+            <div class="wf-card-bar-fill" style="width:${pBar}%"></div>
+          </div>
+        </div>`;
+    };
+
+    container.innerHTML = `
+      <div class="wf-summary">
+        <div class="wf-sum-item"><span class="wf-sum-val">${totalGaps}</span><span class="wf-sum-lbl">총 갭 수</span></div>
+        <div class="wf-sum-item"><span class="wf-sum-val">${totalCats}</span><span class="wf-sum-lbl">역량 카테고리</span></div>
+        <div class="wf-sum-item"><span class="wf-sum-val" style="color:#00ff41">${doneCats}</span><span class="wf-sum-lbl">완료</span></div>
+        <div class="wf-sum-item"><span class="wf-sum-val" style="color:#ffd700">${doingCats}</span><span class="wf-sum-lbl">진행 중</span></div>
+        <div class="wf-sum-item"><span class="wf-sum-val" style="color:#ff4757">${grouped.todo.length}</span><span class="wf-sum-lbl">미착수</span></div>
+        <div class="wf-sum-item"><span class="wf-sum-val" style="color:#00d4ff">${covPct}%</span><span class="wf-sum-lbl">해소율</span></div>
+      </div>
+      <div class="wf-board">
+        ${COLS.map(col => `
+          <div class="wf-col">
+            <div class="wf-col-header" style="border-top:3px solid ${col.color}">
+              <span class="wf-col-title" style="color:${col.color}">${col.label}</span>
+              <span class="wf-col-count">${grouped[col.key].length}개</span>
+              <div class="wf-col-desc">${col.desc}</div>
+            </div>
+            <div class="wf-col-cards">
+              ${grouped[col.key].map(cardHtml).join('')}
+            </div>
+          </div>`).join('')}
+      </div>
+    `;
+
+    container.querySelectorAll('.wf-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const cat    = card.dataset.cat;
+        const label  = COMPCAT_LABEL[cat] || cat;
+        const gaps   = (gapByCat[cat]  || 0);
+        const progs  = d.programs.filter(p => p.fieldCatCode === cat);
+        const st     = statusOf(cat);
+        const stKo   = { todo: '미착수', doing: '진행 중', done: '완료' }[st];
+        const stCol  = { todo: '#ff4757', doing: '#ffd700', done: '#00ff41' }[st];
+        const progHtml = progs.length
+          ? progs.slice(0, 12).map(p => `
+              <div class="detail-list-item detail-clickable" data-program-id="${p.id}">
+                <span class="detail-dot"></span>
+                <span style="flex:1;font-size:11px">${p.name}</span>
+                <span style="color:#a0aab8;font-size:10px">${p.org || ''}</span>
+              </div>`).join('') + (progs.length > 12 ? `<div style="color:#607080;font-size:11px;padding:4px 0">외 ${progs.length - 12}개 프로그램</div>` : '')
+          : '<span class="detail-empty">연계 프로그램 없음</span>';
+        this._openDetail(`
+          <div class="detail-header-block">
+            <div class="detail-strategy-label" style="color:${stCol}">갭 해결 현황 · ${stKo}</div>
+            <h2 class="detail-title">${label}</h2>
+            <div class="detail-en">${cat}</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-section-title">현황 요약</div>
+            <div style="display:flex;gap:16px;padding:8px 0">
+              <div><span style="color:#ff4757;font-size:18px;font-weight:700">${gaps}</span><br><span style="color:#6a7f90;font-size:11px">역량 갭 수</span></div>
+              <div><span style="color:#00d4ff;font-size:18px;font-weight:700">${progs.length}</span><br><span style="color:#6a7f90;font-size:11px">연계 프로그램</span></div>
+              <div><span style="color:${stCol};font-size:18px;font-weight:700">${stKo}</span><br><span style="color:#6a7f90;font-size:11px">해결 상태</span></div>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-section-title">연계 교육 프로그램 (${progs.length}개)</div>
+            <div class="detail-list">${progHtml}</div>
+          </div>
+        `);
+        const body = document.getElementById('detailBody');
+        if (body) body.querySelectorAll('[data-program-id]').forEach(el => {
+          el.addEventListener('click', () => {
+            const program = d.programs.find(p => p.id === el.dataset.programId);
+            if (program) this._pushProgramDetail(program);
+          });
+        });
+      });
+    });
   },
 
   _renderCompetencyHeatmap(container) {

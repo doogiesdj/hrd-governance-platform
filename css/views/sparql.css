@@ -1,0 +1,330 @@
+/* ============================================================
+   SPARQL Query Explorer
+   ============================================================ */
+
+.sparql-layout {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 180px);
+  overflow: hidden;
+}
+
+.sparql-top-bar {
+  flex-shrink: 0;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  overflow-y: auto;
+  max-height: 42vh;
+}
+
+.sparql-top-bar::-webkit-scrollbar { height: 4px; width: 4px; }
+.sparql-top-bar::-webkit-scrollbar-track { background: transparent; }
+.sparql-top-bar::-webkit-scrollbar-thumb { background: rgba(0,212,255,0.2); border-radius: 2px; }
+
+/* NLQ panel horizontal compact layout */
+.nlq-input-row {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  padding: 0 8px 6px;
+}
+
+.nlq-input-row .nlq-input {
+  flex: 1;
+  resize: none;
+}
+
+.nlq-input-row .nlq-query-btn {
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Pre-defined query bar */
+.sparql-predef-bar {
+  border-top: 1px solid var(--color-border);
+  padding: 6px 8px;
+  background: var(--color-bg-primary);
+}
+
+.sparql-predef-label {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+/* Category tabs: horizontal row */
+.sparql-category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.sparql-category-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 11px;
+  color: var(--color-cyan);
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.sparql-category-header:hover {
+  background: rgba(0, 212, 255, 0.12);
+}
+
+.sparql-category-header.active {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+.sparql-category-id {
+  background: var(--color-cyan);
+  color: var(--color-bg-primary);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.sparql-category-label {
+  white-space: nowrap;
+}
+
+/* Query chips: horizontal row */
+.sparql-query-area {
+  display: none;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sparql-query-area.active {
+  display: flex;
+}
+
+.sparql-query-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 20px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
+  font-size: 11px;
+  padding: 4px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.sparql-query-btn:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: var(--color-text-primary);
+}
+
+.sparql-query-btn.active {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+.sparql-query-btn.has-error {
+  color: var(--color-red);
+  opacity: 0.7;
+}
+
+.sparql-query-btn .sparql-qid {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-right: 3px;
+}
+
+/* Result Panel */
+.sparql-result-panel {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-primary);
+}
+
+.sparql-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.sparql-placeholder-icon {
+  font-size: 36px;
+  opacity: 0.4;
+}
+
+.sparql-placeholder-sub {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.sparql-result-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sparql-result-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  flex-shrink: 0;
+}
+
+.sparql-result-title {
+  flex: 1;
+  font-size: 12px;
+  color: var(--color-cyan);
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sparql-sparql-toggle {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
+  font-size: 10px;
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.sparql-sparql-toggle:hover,
+.sparql-sparql-toggle.active {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+.sparql-code {
+  margin: 0;
+  padding: 12px 16px;
+  background: var(--color-bg-tertiary);
+  border-bottom: 1px solid var(--color-border);
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  overflow: auto;
+  max-height: 220px;
+  flex-shrink: 0;
+  white-space: pre;
+}
+
+.sparql-table-wrap {
+  flex: 1;
+  overflow: auto;
+  padding: 12px 16px;
+}
+
+.sparql-table-wrap::-webkit-scrollbar { width: 6px; height: 6px; }
+.sparql-table-wrap::-webkit-scrollbar-track { background: transparent; }
+.sparql-table-wrap::-webkit-scrollbar-thumb { background: rgba(0,212,255,0.2); border-radius: 3px; }
+
+.sparql-error-msg {
+  padding: 20px;
+  color: var(--color-red);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sparql-empty-msg {
+  padding: 20px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.sparql-result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  table-layout: auto;
+}
+
+.sparql-result-table th {
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  padding: 6px 10px;
+  color: var(--color-cyan);
+  text-align: left;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+
+.sparql-result-table td {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  color: var(--color-text-secondary);
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.sparql-result-table tr:nth-child(even) td {
+  background: rgba(0, 212, 255, 0.02);
+}
+
+.sparql-result-table tr:hover td {
+  background: rgba(0, 212, 255, 0.06);
+  color: var(--color-text-primary);
+}
+
+.sparql-row-count {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.sparql-truncated-note {
+  font-size: 10px;
+  color: var(--color-yellow);
+  margin-top: 6px;
+}
+
+.sparql-loading {
+  padding: 30px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
